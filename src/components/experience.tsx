@@ -41,19 +41,19 @@ function ExperienceCard({
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-50px' });
 
-  // Get description array from translations
-  const descriptionKeys = [0, 1, 2, 3];
+  // Get description array from translations based on job
+  const descriptionCounts: Record<string, number> = {
+    vermeg_lead: 4,
+    vermeg_dev: 4,
+    transcom: 4,
+    stellar: 2,
+  };
+  
+  const count = descriptionCounts[expKey] || 0;
   const descriptions: string[] = [];
-  descriptionKeys.forEach((i) => {
-    try {
-      const desc = t(`${expKey}.description.${i}`);
-      if (desc && !desc.includes('description')) {
-        descriptions.push(desc);
-      }
-    } catch {
-      // Key doesn't exist
-    }
-  });
+  for (let i = 0; i < count; i++) {
+    descriptions.push(t(`${expKey}.description.${i}`));
+  }
 
   return (
     <motion.div

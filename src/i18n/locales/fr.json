@@ -99,6 +99,7 @@
     "featured": "En vedette",
     "viewLive": "Voir",
     "viewCode": "Code",
+    "viewDetails": "Voir Détails",
     "screenshotPlaceholder": "screenshot.png",
     "items": {
       "veggo": {
@@ -216,5 +217,32 @@
   "language": {
     "switchTo": "English",
     "current": "FR"
+  },
+  "projectDetails": {
+    "backToProjects": "Retour aux Projets",
+    "challenge": "Le Défi",
+    "solution": "La Solution",
+    "highlights": "Points Clés",
+    "results": "Résultats & Impact",
+    "role": "Mon Rôle",
+    "duration": "Durée",
+    "techStack": "Technologies",
+    "viewLive": "Voir le Site",
+    "viewCode": "Voir le Code",
+    "veggo": {
+      "challenge": "VERMEG avait besoin d'une plateforme low-code moderne permettant aux utilisateurs métier de créer des applications financières sans connaissances techniques approfondies. Les outils existants étaient obsolètes, difficiles à maintenir et manquaient de flexibilité pour les workflows financiers complexes.",
+      "solution": "J'ai dirigé le développement frontend de VEGGO, concevant et implémentant une bibliothèque de composants complète. L'architecture s'est concentrée sur la réutilisabilité, l'accessibilité et la performance, permettant aux utilisateurs de glisser-déposer des widgets pré-construits pour créer des applications sophistiquées.",
+      "results": "La plateforme alimente maintenant plusieurs clients entreprise, réduisant le temps de développement d'applications de 60%. La bibliothèque de composants compte plus de 75 widgets avec 95% de couverture de tests, et l'équipe s'est agrandie tout en maintenant la qualité du code grâce aux patterns et à la documentation que j'ai établis."
+    },
+    "pijiz": {
+      "challenge": "Le client avait besoin d'une boutique e-commerce professionnelle capable de gérer plusieurs langues, d'intégrer différents modes de paiement et de bien se positionner sur les moteurs de recherche. La boutique devait être facile à gérer et refléter l'esthétique moderne de la marque.",
+      "solution": "Construction d'une boutique Shopify personnalisée avec un thème adapté à l'identité de la marque. Implémentation du support multilingue pour les clients internationaux, intégration de passerelles de paiement locales et internationales, et optimisation de chaque page pour le SEO incluant les balises meta, les données structurées et la vitesse de chargement.",
+      "results": "La boutique a été lancée avec succès avec une amélioration de 40% des temps de chargement par rapport au template original. Les optimisations SEO ont conduit à des classements en première page Google pour les termes produits clés dans les 3 mois suivant le lancement."
+    },
+    "banking": {
+      "challenge": "Une application bancaire majeure fonctionnait sur Angular v11, qui approchait de sa fin de vie. La base de code avait accumulé de la dette technique, des thèmes personnalisés incompatibles avec les nouvelles versions d'Angular, et l'équipe devait moderniser sans perturber le développement en cours.",
+      "solution": "Direction d'une stratégie de migration par phases permettant à l'équipe de continuer le développement de fonctionnalités tout en effectuant la mise à niveau. Refactorisation des modules legacy pour utiliser les patterns Angular modernes, migration du système de thèmes personnalisés vers des variables CSS pour une meilleure maintenabilité, et mise à jour systématique de toutes les dépendances.",
+      "results": "Mise à niveau réussie vers Angular v16 avec zéro incident en production. Les temps de build ont été améliorés de 45%, et la base de code modernisée a permis à l'équipe d'implémenter de nouvelles fonctionnalités 30% plus rapidement. La migration a également résolu plus de 50 bugs de longue date liés au framework obsolète."
+    }
   }
 }

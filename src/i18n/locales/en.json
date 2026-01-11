@@ -99,6 +99,7 @@
     "featured": "Featured",
     "viewLive": "Live",
     "viewCode": "Code",
+    "viewDetails": "View Details",
     "screenshotPlaceholder": "screenshot.png",
     "items": {
       "veggo": {
@@ -216,5 +217,32 @@
   "language": {
     "switchTo": "Français",
     "current": "EN"
+  },
+  "projectDetails": {
+    "backToProjects": "Back to Projects",
+    "challenge": "The Challenge",
+    "solution": "The Solution",
+    "highlights": "Key Highlights",
+    "results": "Results & Impact",
+    "role": "My Role",
+    "duration": "Duration",
+    "techStack": "Tech Stack",
+    "viewLive": "View Live Site",
+    "viewCode": "View Source Code",
+    "veggo": {
+      "challenge": "VERMEG needed a modern low-code platform that would allow business users to build financial applications without deep technical knowledge. The existing tools were outdated, hard to maintain, and lacked the flexibility required for complex financial workflows.",
+      "solution": "I led the frontend development of VEGGO, designing and implementing a comprehensive component library from scratch. The architecture focused on reusability, accessibility, and performance, allowing users to drag-and-drop pre-built widgets to create sophisticated applications.",
+      "results": "The platform now powers multiple enterprise clients, reducing application development time by 60%. The component library has grown to 75+ widgets with 95% test coverage, and the team has expanded while maintaining code quality through the patterns and documentation I established."
+    },
+    "pijiz": {
+      "challenge": "The client needed a professional e-commerce store that could handle multiple languages, integrate various payment methods, and rank well on search engines. The store had to be easy to manage and reflect the brand's modern aesthetic.",
+      "solution": "Built a custom Shopify store with a tailored theme that matched the brand identity. Implemented multi-language support for international customers, integrated local and international payment gateways, and optimized every page for SEO including meta tags, structured data, and page speed.",
+      "results": "The store launched successfully with a 40% improvement in page load times compared to the original template. The SEO optimizations led to first-page Google rankings for key product terms within 3 months of launch."
+    },
+    "banking": {
+      "challenge": "A major banking application was running on Angular v11, which was approaching end-of-life. The codebase had accumulated technical debt, custom themes that weren't compatible with newer Angular versions, and the team needed to modernize without disrupting ongoing development.",
+      "solution": "Led a phased migration strategy that allowed the team to continue feature development while upgrading. Refactored legacy modules to use modern Angular patterns, migrated the custom theme system to CSS variables for better maintainability, and updated all dependencies systematically.",
+      "results": "Successfully upgraded to Angular v16 with zero production incidents. Build times improved by 45%, and the modernized codebase enabled the team to implement new features 30% faster. The migration also resolved 50+ long-standing bugs related to the outdated framework."
+    }
   }
 }

@@ -1,9 +1,10 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
+import { useRouter } from 'next/navigation';
 import { motion, useInView } from 'framer-motion';
 import { useRef, useState } from 'react';
-import { ExternalLink, Github, Star, Folder } from 'lucide-react';
+import { ExternalLink, Github, Star, Folder, ArrowRight } from 'lucide-react';
 
 interface ProjectData {
   key: string;
@@ -11,6 +12,7 @@ interface ProjectData {
   liveUrl?: string;
   githubUrl?: string;
   featured?: boolean;
+  detailPage?: string;
 }
 
 const projectsData: ProjectData[] = [
@@ -18,11 +20,13 @@ const projectsData: ProjectData[] = [
     key: 'veggo',
     technologies: ['Angular', 'TypeScript', 'RxJS', 'NgRx', 'SASS', 'Storybook'],
     featured: true,
+    detailPage: '/projects/veggo',
   },
   {
     key: 'pijiz',
     technologies: ['Shopify', 'Liquid', 'JavaScript', 'CSS'],
     liveUrl: 'https://pijiz.com',
+    detailPage: '/projects/pijiz',
   },
   {
     key: 'dubai',
@@ -31,6 +35,7 @@ const projectsData: ProjectData[] = [
   {
     key: 'banking',
     technologies: ['Angular', 'TypeScript', 'Jest', 'Cypress'],
+    detailPage: '/projects/banking',
   },
   {
     key: 'nrg',
@@ -41,9 +46,16 @@ const projectsData: ProjectData[] = [
 
 function ProjectCard({ project, index }: { project: ProjectData; index: number }) {
   const t = useTranslations('projects');
+  const router = useRouter();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-50px' });
   const [isHovered, setIsHovered] = useState(false);
+
+  const handleCardClick = () => {
+    if (project.detailPage) {
+      router.push(project.detailPage);
+    }
+  };
 
   return (
     <motion.div
@@ -56,15 +68,16 @@ function ProjectCard({ project, index }: { project: ProjectData; index: number }
       onMouseLeave={() => setIsHovered(false)}
     >
       <motion.div
-        className="bento-card h-full relative overflow-hidden"
+        className={`bento-card h-full relative overflow-hidden ${project.detailPage ? 'cursor-pointer' : ''}`}
         whileHover={{ y: -5 }}
+        onClick={handleCardClick}
         style={{
           transformStyle: 'preserve-3d',
         }}
       >
         {/* Featured Badge */}
         {project.featured && (
-          <div className="absolute top-4 right-4 flex items-center gap-1 px-2 py-1 bg-day-accent/10 dark:bg-night-cyan/10 rounded-full text-day-accent dark:text-night-cyan text-xs font-mono">
+          <div className="absolute top-4 right-4 flex items-center gap-1 px-2 py-1 bg-day-accent/10 dark:bg-night-cyan/10 rounded-full text-day-accent dark:text-night-cyan text-xs font-mono z-10">
             <Star className="w-3 h-3" />
             {t('featured')}
           </div>
@@ -89,27 +102,35 @@ function ProjectCard({ project, index }: { project: ProjectData; index: number }
             transition={{ duration: 0.2 }}
           >
             <div className="flex gap-3">
+              {project.detailPage && (
+                <span className="px-4 py-2 rounded-full bg-white/90 text-day-accent font-medium text-sm flex items-center gap-2">
+                  {t('viewDetails')}
+                  <ArrowRight className="w-4 h-4" />
+                </span>
+              )}
               {project.liveUrl && (
-                <a
-                  href={project.liveUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    window.open(project.liveUrl, '_blank', 'noopener,noreferrer');
+                  }}
                   className="w-10 h-10 rounded-full bg-white/90 flex items-center justify-center text-day-accent hover:bg-white transition-colors"
                   aria-label="View live site"
                 >
                   <ExternalLink className="w-5 h-5" />
-                </a>
+                </button>
               )}
               {project.githubUrl && (
-                <a
-                  href={project.githubUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    window.open(project.githubUrl, '_blank', 'noopener,noreferrer');
+                  }}
                   className="w-10 h-10 rounded-full bg-white/90 flex items-center justify-center text-day-accent hover:bg-white transition-colors"
                   aria-label="View source code"
                 >
                   <Github className="w-5 h-5" />
-                </a>
+                </button>
               )}
             </div>
           </motion.div>
@@ -145,27 +166,35 @@ function ProjectCard({ project, index }: { project: ProjectData; index: number }
 
         {/* Links for non-hovered state */}
         <div className="mt-4 flex gap-4">
+          {project.detailPage && (
+            <span className="flex items-center gap-1 text-sm text-day-accent dark:text-night-cyan font-medium">
+              {t('viewDetails')}
+              <ArrowRight className="w-4 h-4" />
+            </span>
+          )}
           {project.liveUrl && (
-            <a
-              href={project.liveUrl}
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                window.open(project.liveUrl, '_blank', 'noopener,noreferrer');
+              }}
               className="flex items-center gap-1 text-sm text-day-accent dark:text-night-cyan hover:underline"
             >
               <ExternalLink className="w-4 h-4" />
               {t('viewLive')}
-            </a>
+            </button>
           )}
           {project.githubUrl && (
-            <a
-              href={project.githubUrl}
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                window.open(project.githubUrl, '_blank', 'noopener,noreferrer');
+              }}
               className="flex items-center gap-1 text-sm text-day-accent dark:text-night-cyan hover:underline"
             >
               <Github className="w-4 h-4" />
               {t('viewCode')}
-            </a>
+            </button>
           )}
         </div>
       </motion.div>
