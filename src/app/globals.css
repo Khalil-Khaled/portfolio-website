@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 251 251 251;
+    --foreground: 64 63 83;
+    --accent: 72 118 214;
+    --accent-alt: 153 76 195;
+    --muted: 12 150 155;
+  }
+
+  .dark {
+    --background: 1 22 39;
+    --foreground: 214 222 235;
+    --accent: 130 170 255;
+    --accent-alt: 199 146 234;
+    --muted: 127 219 202;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-day-bg text-day-text dark:bg-night-bg dark:text-night-text;
+    @apply transition-colors duration-300;
+  }
+
+  ::selection {
+    @apply bg-day-accent/30 dark:bg-night-accent/30;
+  }
+}
+
+@layer components {
+  .text-gradient {
+    @apply bg-gradient-to-r from-day-accent to-day-accent-alt dark:from-night-cyan dark:to-night-accent;
+    @apply bg-clip-text text-transparent;
+  }
+
+  .glow-accent {
+    box-shadow: 0 0 40px -10px rgb(var(--accent) / 0.5);
+  }
+
+  .card-hover {
+    @apply transition-all duration-300;
+    @apply hover:shadow-xl hover:-translate-y-1;
+  }
+
+  .magnetic-btn {
+    @apply relative overflow-hidden;
+    @apply transition-transform duration-200 ease-out;
+  }
+
+  .section-container {
+    @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .bento-card {
+    @apply bg-day-bg-alt dark:bg-night-bg-alt;
+    @apply border border-day-bg-highlight dark:border-night-bg-highlight;
+    @apply rounded-2xl p-6;
+    @apply transition-all duration-300 ease-out;
+  }
+
+  .bento-card:hover {
+    @apply border-day-accent/50 dark:border-night-cyan/50;
+    @apply shadow-lg;
+  }
+}
+
+@layer utilities {
+  .animation-delay-100 {
+    animation-delay: 100ms;
+  }
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+  .animation-delay-300 {
+    animation-delay: 300ms;
+  }
+  .animation-delay-400 {
+    animation-delay: 400ms;
+  }
+  .animation-delay-500 {
+    animation-delay: 500ms;
+  }
+  .animation-delay-600 {
+    animation-delay: 600ms;
+  }
+  .animation-delay-700 {
+    animation-delay: 700ms;
+  }
+  .animation-delay-800 {
+    animation-delay: 800ms;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-day-bg-alt dark:bg-night-bg-alt;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-day-accent/30 dark:bg-night-accent/30;
+  @apply rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-day-accent/50 dark:bg-night-accent/50;
+}
+
+/* Focus styles for accessibility */
+*:focus-visible {
+  @apply outline-2 outline-offset-2 outline-day-accent dark:outline-night-cyan;
+}
