@@ -31,10 +31,12 @@ function ExperienceCard({
   expKey,
   technologies,
   index,
+  isLast,
 }: {
   expKey: string;
   technologies?: string[];
   index: number;
+  isLast: boolean;
 }) {
   const t = useTranslations('experience.jobs');
   const [isExpanded, setIsExpanded] = useState(index === 0);
@@ -61,14 +63,16 @@ function ExperienceCard({
       initial={{ opacity: 0, x: -50 }}
       animate={isInView ? { opacity: 1, x: 0 } : {}}
       transition={{ duration: 0.5, delay: index * 0.1 }}
-      className="relative pl-8 pb-8 last:pb-0"
+      className="relative pl-10 pb-8 last:pb-0 overflow-visible"
     >
-      {/* Timeline Line */}
-      <div className="absolute left-0 top-0 bottom-0 w-px bg-day-bg-highlight dark:bg-night-bg-highlight" />
+      {/* Timeline Line - connects to next card's dot */}
+      {!isLast && (
+        <div className="absolute left-[7px] top-[28px] -bottom-[28px] w-0.5 bg-day-muted/30 dark:bg-night-comment/30" />
+      )}
       
-      {/* Timeline Dot */}
+      {/* Timeline Dot - aligned with card title */}
       <motion.div
-        className="absolute left-0 top-0 w-4 h-4 -translate-x-1/2 rounded-full bg-day-accent dark:bg-night-cyan"
+        className="absolute left-0 top-5 w-4 h-4 rounded-full bg-day-accent dark:bg-night-cyan z-10 shadow-lg shadow-day-accent/30 dark:shadow-night-cyan/30"
         initial={{ scale: 0 }}
         animate={isInView ? { scale: 1 } : {}}
         transition={{ duration: 0.3, delay: index * 0.1 + 0.2 }}
@@ -180,6 +184,7 @@ export function Experience() {
                 expKey={exp.key}
                 technologies={exp.technologies}
                 index={index}
+                isLast={index === experienceData.length - 1}
               />
             ))}
           </div>
