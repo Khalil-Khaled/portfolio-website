@@ -1,62 +1,46 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
 import { motion, useInView } from 'framer-motion';
 import { useRef, useState } from 'react';
 import { ExternalLink, Github, Star, Folder } from 'lucide-react';
 
-interface Project {
-  title: string;
-  description: string;
-  image?: string;
+interface ProjectData {
+  key: string;
   technologies: string[];
   liveUrl?: string;
   githubUrl?: string;
   featured?: boolean;
-  period?: string;
 }
 
-const projects: Project[] = [
+const projectsData: ProjectData[] = [
   {
-    title: 'VEGGO – Low-Code Platform',
-    description:
-      'Enterprise low-code platform for building financial applications. Led frontend development, designed 75+ reusable Angular widgets, and established component architecture patterns.',
+    key: 'veggo',
     technologies: ['Angular', 'TypeScript', 'RxJS', 'NgRx', 'SASS', 'Storybook'],
     featured: true,
-    period: '2024 - Present',
   },
   {
-    title: 'E-commerce Store – Pijiz',
-    description:
-      'Shopify-based e-commerce platform with custom theme development, multi-language support, payment integration, and SEO optimization.',
+    key: 'pijiz',
     technologies: ['Shopify', 'Liquid', 'JavaScript', 'CSS'],
     liveUrl: 'https://pijiz.com',
-    period: 'May 2024',
   },
   {
-    title: 'Visit Dubai UI Redesign',
-    description:
-      'Freelance project to improve the UI/UX of Visit Dubai website. Enhanced page structure, navigation, and implemented responsive design fixes.',
+    key: 'dubai',
     technologies: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS'],
-    period: 'Jan 2024 - Feb 2024',
   },
   {
-    title: 'Banking App Migration',
-    description:
-      'Led the full framework upgrade from Angular v11 to v16 for a banking application. Refactored UI components and migrated custom themes.',
+    key: 'banking',
     technologies: ['Angular', 'TypeScript', 'Jest', 'Cypress'],
-    period: 'Nov 2023 - Jan 2024',
   },
   {
-    title: 'NRG Global Power – Corporate Website',
-    description:
-      'Built and deployed a corporate WordPress website with business email setup, SEO optimization, and GoDaddy hosting configuration.',
+    key: 'nrg',
     technologies: ['WordPress', 'PHP', 'CSS', 'SEO'],
     liveUrl: 'https://nrgglobalpower.us',
-    period: 'Oct 2023',
   },
 ];
 
-function ProjectCard({ project, index }: { project: Project; index: number }) {
+function ProjectCard({ project, index }: { project: ProjectData; index: number }) {
+  const t = useTranslations('projects');
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-50px' });
   const [isHovered, setIsHovered] = useState(false);
@@ -82,7 +66,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
         {project.featured && (
           <div className="absolute top-4 right-4 flex items-center gap-1 px-2 py-1 bg-day-accent/10 dark:bg-night-cyan/10 rounded-full text-day-accent dark:text-night-cyan text-xs font-mono">
             <Star className="w-3 h-3" />
-            Featured
+            {t('featured')}
           </div>
         )}
 
@@ -92,8 +76,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
             <div className="text-center">
               <Folder className="w-12 h-12 mx-auto mb-2 text-day-accent/40 dark:text-night-cyan/40" />
               <p className="text-xs text-day-comment dark:text-night-comment font-mono">
-                {/* Add screenshot here */}
-                screenshot.png
+                {t('screenshotPlaceholder')}
               </p>
             </div>
           </div>
@@ -136,17 +119,15 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
         <div>
           <div className="flex items-start justify-between gap-2 mb-2">
             <h3 className="text-lg font-bold text-day-text dark:text-night-text group-hover:text-day-accent dark:group-hover:text-night-cyan transition-colors">
-              {project.title}
+              {t(`items.${project.key}.title`)}
             </h3>
-            {project.period && (
-              <span className="text-xs font-mono text-day-comment dark:text-night-comment whitespace-nowrap">
-                {project.period}
-              </span>
-            )}
+            <span className="text-xs font-mono text-day-comment dark:text-night-comment whitespace-nowrap">
+              {t(`items.${project.key}.period`)}
+            </span>
           </div>
           
           <p className="text-sm text-day-text/70 dark:text-night-text/70 mb-4 leading-relaxed">
-            {project.description}
+            {t(`items.${project.key}.description`)}
           </p>
 
           {/* Technologies */}
@@ -172,7 +153,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
               className="flex items-center gap-1 text-sm text-day-accent dark:text-night-cyan hover:underline"
             >
               <ExternalLink className="w-4 h-4" />
-              Live
+              {t('viewLive')}
             </a>
           )}
           {project.githubUrl && (
@@ -183,7 +164,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
               className="flex items-center gap-1 text-sm text-day-accent dark:text-night-cyan hover:underline"
             >
               <Github className="w-4 h-4" />
-              Code
+              {t('viewCode')}
             </a>
           )}
         </div>
@@ -193,6 +174,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
 }
 
 export function Projects() {
+  const t = useTranslations('projects');
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
@@ -207,15 +189,15 @@ export function Projects() {
         >
           {/* Section Header */}
           <div className="flex items-center gap-4 mb-12">
-            <span className="text-day-accent dark:text-night-cyan font-mono">03.</span>
-            <h2 className="text-3xl sm:text-4xl font-bold">Projects</h2>
+            <span className="text-day-accent dark:text-night-cyan font-mono">{t('sectionNumber')}.</span>
+            <h2 className="text-3xl sm:text-4xl font-bold">{t('title')}</h2>
             <div className="flex-1 h-px bg-day-bg-highlight dark:bg-night-bg-highlight" />
           </div>
 
           {/* Projects Grid */}
           <div className="grid md:grid-cols-2 gap-6">
-            {projects.map((project, index) => (
-              <ProjectCard key={project.title} project={project} index={index} />
+            {projectsData.map((project, index) => (
+              <ProjectCard key={project.key} project={project} index={index} />
             ))}
           </div>
         </motion.div>

@@ -1,21 +1,24 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { useTranslations } from 'next-intl';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Download } from 'lucide-react';
 import { ThemeToggle } from './theme-toggle';
-
-const navItems = [
-  { name: 'About', href: '#about' },
-  { name: 'Experience', href: '#experience' },
-  { name: 'Projects', href: '#projects' },
-  { name: 'Skills', href: '#skills' },
-  { name: 'Contact', href: '#contact' },
-];
+import { LanguageSwitcher } from './language-switcher';
 
 export function Navigation() {
+  const t = useTranslations('nav');
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const navItems = [
+    { name: t('about'), href: '#about' },
+    { name: t('experience'), href: '#experience' },
+    { name: t('projects'), href: '#projects' },
+    { name: t('skills'), href: '#skills' },
+    { name: t('contact'), href: '#contact' },
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -69,7 +72,7 @@ export function Navigation() {
             </div>
 
             {/* Actions */}
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-3">
               <motion.a
                 href="/cv.pdf"
                 download
@@ -78,9 +81,10 @@ export function Navigation() {
                 whileTap={{ scale: 0.95 }}
               >
                 <Download className="w-4 h-4" />
-                <span>CV</span>
+                <span>{t('cv')}</span>
               </motion.a>
-              
+
+              <LanguageSwitcher />
               <ThemeToggle />
 
               {/* Mobile Menu Button */}
@@ -137,7 +141,7 @@ export function Navigation() {
                   transition={{ delay: navItems.length * 0.1 }}
                 >
                   <Download className="w-5 h-5" />
-                  <span>Download CV</span>
+                  <span>{t('cv')}</span>
                 </motion.a>
               </div>
             </nav>

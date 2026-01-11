@@ -1,0 +1,15 @@
+# Conversation logs (archived by pre-commit hook)
+*.md
+
+# Images (archived with conversations)
+images/
+
+# Temporary state files
+.image-state-*.json
+.file-edits-*.json
+.conversation-tracker-*.json
+.git-setup-done
+.migration-log.json
+
+# Warning file (created when no git repo found)
+GIT_WARNING.md

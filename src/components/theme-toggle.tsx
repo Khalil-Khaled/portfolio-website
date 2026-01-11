@@ -1,6 +1,7 @@
 'use client';
 
 import { useTheme } from 'next-themes';
+import { useTranslations } from 'next-intl';
 import { useEffect, useState } from 'react';
 import { Moon, Sun } from 'lucide-react';
 import { motion } from 'framer-motion';
@@ -8,6 +9,7 @@ import { motion } from 'framer-motion';
 export function ThemeToggle() {
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
+  const t = useTranslations('theme');
 
   useEffect(() => {
     setMounted(true);
@@ -27,7 +29,7 @@ export function ThemeToggle() {
       className="relative w-10 h-10 rounded-full bg-day-bg-alt dark:bg-night-bg-alt border border-day-bg-highlight dark:border-night-bg-highlight flex items-center justify-center overflow-hidden"
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
-      aria-label={`Switch to ${isDark ? 'light' : 'dark'} mode`}
+      aria-label={isDark ? t('switchToLight') : t('switchToDark')}
     >
       <motion.div
         initial={false}

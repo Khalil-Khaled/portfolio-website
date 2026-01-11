@@ -1,5 +1,6 @@
 export { ThemeProvider } from './theme-provider';
 export { ThemeToggle } from './theme-toggle';
+export { LanguageSwitcher } from './language-switcher';
 export { Navigation } from './navigation';
 export { Hero } from './hero';
 export { About } from './about';

@@ -1,20 +1,22 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { Code2, Users, Zap, Globe } from 'lucide-react';
 
-const stats = [
-  { icon: Code2, value: '5+', label: 'Years Experience' },
-  { icon: Users, value: '75+', label: 'Components Built' },
-  { icon: Zap, value: '160+', label: 'Bugs Squashed' },
-  { icon: Globe, value: '3', label: 'Languages Spoken' },
-];
-
 export function About() {
+  const t = useTranslations('about');
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
+
+  const stats = [
+    { icon: Code2, value: '5+', label: t('stats.years') },
+    { icon: Users, value: '75+', label: t('stats.components') },
+    { icon: Zap, value: '160+', label: t('stats.bugs') },
+    { icon: Globe, value: '3', label: t('stats.languages') },
+  ];
 
   return (
     <section id="about" className="py-24 relative">
@@ -27,8 +29,8 @@ export function About() {
         >
           {/* Section Header */}
           <div className="flex items-center gap-4 mb-12">
-            <span className="text-day-accent dark:text-night-cyan font-mono">01.</span>
-            <h2 className="text-3xl sm:text-4xl font-bold">About Me</h2>
+            <span className="text-day-accent dark:text-night-cyan font-mono">{t('sectionNumber')}.</span>
+            <h2 className="text-3xl sm:text-4xl font-bold">{t('title')}</h2>
             <div className="flex-1 h-px bg-day-bg-highlight dark:bg-night-bg-highlight" />
           </div>
 
@@ -63,7 +65,7 @@ export function About() {
               {/* Tech Stack Highlight */}
               <div className="pt-4">
                 <p className="text-sm font-mono text-day-comment dark:text-night-comment mb-3">
-                  Technologies I work with daily:
+                  {t('techTitle')}
                 </p>
                 <div className="flex flex-wrap gap-2">
                   {['Angular', 'TypeScript', 'RxJS', 'NgRx', 'Tailwind', 'Jest', 'Cypress'].map(
@@ -98,7 +100,7 @@ export function About() {
                       </div>
                       <p className="text-sm text-day-comment dark:text-night-comment font-mono">
                         {/* Your photo here */}
-                        profile-image.jpg
+                        {t('imagePlaceholder')}
                       </p>
                     </div>
                   </div>

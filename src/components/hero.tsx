@@ -1,9 +1,12 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
 import { ArrowDown, Github, Linkedin, Mail, MapPin } from 'lucide-react';
 
 export function Hero() {
+  const t = useTranslations('hero');
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Animated Background */}
@@ -49,7 +52,7 @@ export function Hero() {
           >
             <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-day-bg-alt dark:bg-night-bg-alt border border-day-bg-highlight dark:border-night-bg-highlight text-sm font-mono">
               <span className="w-2 h-2 rounded-full bg-day-green dark:bg-night-green animate-pulse" />
-              Available for opportunities
+              {t('available')}
             </span>
           </motion.div>
 
@@ -73,9 +76,9 @@ export function Hero() {
           >
             <h2 className="text-xl sm:text-2xl md:text-3xl text-day-text/80 dark:text-night-text/80 font-mono">
               <span className="text-day-accent dark:text-night-cyan">{'>'}</span>{' '}
-              Frontend Engineer{' '}
-              <span className="text-day-accent-alt dark:text-night-accent">|</span>{' '}
-              Angular Expert
+              {t('title')}{' '}
+              <span className="text-day-accent-alt dark:text-night-accent">{t('titleSeparator')}</span>{' '}
+              {t('subtitle')}
             </h2>
           </motion.div>
 
@@ -87,7 +90,7 @@ export function Hero() {
             className="flex items-center justify-center gap-2 text-day-comment dark:text-night-comment mb-8"
           >
             <MapPin className="w-4 h-4" />
-            <span>Tunis, Tunisia · Open to relocation</span>
+            <span>{t('location')}</span>
           </motion.div>
 
           {/* Description */}
@@ -97,9 +100,9 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.4 }}
             className="text-lg text-day-text/70 dark:text-night-text/70 max-w-2xl mx-auto mb-10 leading-relaxed"
           >
-            Building scalable, modern web applications with{' '}
-            <span className="text-day-accent dark:text-night-cyan font-medium">5+ years</span> of experience.
-            Passionate about UI performance, developer experience, and clean architecture.
+            {t('description', { years: '' })}
+            <span className="text-day-accent dark:text-night-cyan font-medium">{t('yearsExperience')}</span>
+            {t('description', { years: '' }).includes('{years}') ? '' : '.'}
           </motion.p>
 
           {/* CTA Buttons */}
@@ -115,7 +118,7 @@ export function Hero() {
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
             >
-              Get in Touch
+              {t('cta.contact')}
             </motion.a>
             <motion.a
               href="#projects"
@@ -123,7 +126,7 @@ export function Hero() {
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
             >
-              View Projects
+              {t('cta.projects')}
             </motion.a>
           </motion.div>
 
@@ -169,7 +172,7 @@ export function Hero() {
             transition={{ duration: 1.5, repeat: Infinity }}
             aria-label="Scroll down"
           >
-            <span className="text-xs font-mono">scroll</span>
+            <span className="text-xs font-mono">{t('scroll')}</span>
             <ArrowDown className="w-4 h-4" />
           </motion.a>
         </motion.div>

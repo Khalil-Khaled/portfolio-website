@@ -1,73 +1,59 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
 import { motion, useInView } from 'framer-motion';
 import { useRef, useState } from 'react';
 import { Briefcase, Calendar, ChevronDown } from 'lucide-react';
 
-interface Experience {
-  title: string;
-  company: string;
-  location: string;
-  period: string;
-  description: string[];
+interface ExperienceData {
+  key: string;
   technologies?: string[];
 }
 
-const experiences: Experience[] = [
+const experienceData: ExperienceData[] = [
   {
-    title: 'Software Engineer – Frontend (Low-Code Platform)',
-    company: 'VERMEG',
-    location: 'Tunisia',
-    period: 'Jan 2024 – Present',
-    description: [
-      'Led code reviews and mentored 2 junior developers, improving code quality and onboarding efficiency.',
-      'Designed and developed a reusable Angular component library (75+ widgets), reducing duplication by 35%.',
-      'Migrated GitLab CI/CD pipelines to cloud, achieving 65% faster build times and 30% fewer failures.',
-      'Contributed to functional design and actively participated in Agile ceremonies.',
-    ],
+    key: 'vermeg_lead',
     technologies: ['Angular', 'TypeScript', 'RxJS', 'NgRx', 'GitLab CI/CD', 'Docker'],
   },
   {
-    title: 'Frontend Developer – Financial Products',
-    company: 'VERMEG',
-    location: 'Tunisia',
-    period: 'Oct 2020 – Jan 2024',
-    description: [
-      'Fixed 160+ bugs and delivered high-impact features across multiple Angular-based financial apps.',
-      'Refactored legacy modules and contributed to Angular version upgrades (v11 to v16).',
-      'Achieved 95% test coverage with unit and E2E testing (Jest, Cypress).',
-      'Collaborated with UI/UX teams to convert Figma prototypes into scalable, responsive interfaces.',
-    ],
+    key: 'vermeg_dev',
     technologies: ['Angular', 'Jest', 'Cypress', 'Figma', 'SASS', 'REST APIs'],
   },
   {
-    title: 'Customer Service Representative – PayPal',
-    company: 'TRANSCOM',
-    location: 'Tunisia',
-    period: 'Oct 2017 – Apr 2020',
-    description: [
-      'Handled customer calls and support inquiries in English and French.',
-      'Managed PayPal claims, disputes, and technical issues related to e-commerce integrations.',
-      'Assisted in onboarding new hires through peer mentoring and training.',
-      'Achieved 90%+ in KPIs related to resolution time, empathy, and customer satisfaction.',
-    ],
+    key: 'transcom',
   },
   {
-    title: 'Software Developer Intern – Game Development',
-    company: 'Stellar VFX',
-    location: 'Tunisia',
-    period: 'Feb 2017 – Jul 2017',
-    description: [
-      'Built interactive game mechanics and UI with performance optimizations.',
-      'Integrated assets and performed functional testing based on gameplay feedback.',
-    ],
+    key: 'stellar',
   },
 ];
 
-function ExperienceCard({ experience, index }: { experience: Experience; index: number }) {
+function ExperienceCard({
+  expKey,
+  technologies,
+  index,
+}: {
+  expKey: string;
+  technologies?: string[];
+  index: number;
+}) {
+  const t = useTranslations('experience.jobs');
   const [isExpanded, setIsExpanded] = useState(index === 0);
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-50px' });
+
+  // Get description array from translations
+  const descriptionKeys = [0, 1, 2, 3];
+  const descriptions: string[] = [];
+  descriptionKeys.forEach((i) => {
+    try {
+      const desc = t(`${expKey}.description.${i}`);
+      if (desc && !desc.includes('description')) {
+        descriptions.push(desc);
+      }
+    } catch {
+      // Key doesn't exist
+    }
+  });
 
   return (
     <motion.div
@@ -100,19 +86,19 @@ function ExperienceCard({ experience, index }: { experience: Experience; index: 
         <div className="flex items-start justify-between gap-4">
           <div className="flex-1">
             <h3 className="text-lg font-bold text-day-text dark:text-night-text mb-1">
-              {experience.title}
+              {t(`${expKey}.title`)}
             </h3>
             <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-sm">
               <span className="flex items-center gap-1 text-day-accent dark:text-night-cyan font-medium">
                 <Briefcase className="w-4 h-4" />
-                {experience.company}
+                {t(`${expKey}.company`)}
               </span>
               <span className="text-day-comment dark:text-night-comment">
-                {experience.location}
+                {t(`${expKey}.location`)}
               </span>
               <span className="flex items-center gap-1 text-day-comment dark:text-night-comment font-mono text-xs">
                 <Calendar className="w-3 h-3" />
-                {experience.period}
+                {t(`${expKey}.period`)}
               </span>
             </div>
           </div>
@@ -136,7 +122,7 @@ function ExperienceCard({ experience, index }: { experience: Experience; index: 
           className="overflow-hidden"
         >
           <ul className="mt-4 space-y-2">
-            {experience.description.map((item, i) => (
+            {descriptions.map((item, i) => (
               <li
                 key={i}
                 className="flex items-start gap-2 text-day-text/80 dark:text-night-text/80 text-sm"
@@ -147,9 +133,9 @@ function ExperienceCard({ experience, index }: { experience: Experience; index: 
             ))}
           </ul>
 
-          {experience.technologies && (
+          {technologies && (
             <div className="mt-4 flex flex-wrap gap-2">
-              {experience.technologies.map((tech) => (
+              {technologies.map((tech) => (
                 <span
                   key={tech}
                   className="px-2 py-1 text-xs font-mono bg-day-bg dark:bg-night-bg rounded text-day-muted dark:text-night-muted"
@@ -166,6 +152,7 @@ function ExperienceCard({ experience, index }: { experience: Experience; index: 
 }
 
 export function Experience() {
+  const t = useTranslations('experience');
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
@@ -180,15 +167,20 @@ export function Experience() {
         >
           {/* Section Header */}
           <div className="flex items-center gap-4 mb-12">
-            <span className="text-day-accent dark:text-night-cyan font-mono">02.</span>
-            <h2 className="text-3xl sm:text-4xl font-bold">Experience</h2>
+            <span className="text-day-accent dark:text-night-cyan font-mono">{t('sectionNumber')}.</span>
+            <h2 className="text-3xl sm:text-4xl font-bold">{t('title')}</h2>
             <div className="flex-1 h-px bg-day-bg-highlight dark:bg-night-bg-highlight" />
           </div>
 
           {/* Timeline */}
           <div className="max-w-3xl">
-            {experiences.map((exp, index) => (
-              <ExperienceCard key={index} experience={exp} index={index} />
+            {experienceData.map((exp, index) => (
+              <ExperienceCard
+                key={exp.key}
+                expKey={exp.key}
+                technologies={exp.technologies}
+                index={index}
+              />
             ))}
           </div>
         </motion.div>

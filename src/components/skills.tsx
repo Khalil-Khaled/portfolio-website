@@ -1,5 +1,6 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import {
@@ -15,7 +16,7 @@ import {
 
 interface SkillCategory {
   icon: typeof Code2;
-  title: string;
+  key: string;
   skills: string[];
   color: string;
 }
@@ -23,7 +24,7 @@ interface SkillCategory {
 const skillCategories: SkillCategory[] = [
   {
     icon: Code2,
-    title: 'Frontend',
+    key: 'frontend',
     skills: [
       'Angular',
       'TypeScript',
@@ -44,50 +45,34 @@ const skillCategories: SkillCategory[] = [
   },
   {
     icon: Server,
-    title: 'Backend & APIs',
+    key: 'backend',
     skills: ['Java', 'Spring Boot', 'NestJS', 'ExpressJS', 'SQL', 'REST APIs', 'RabbitMQ'],
     color: 'accent',
   },
   {
     icon: TestTube,
-    title: 'Testing',
+    key: 'testing',
     skills: ['Jest', 'Cypress', 'Storybook', 'ESLint', 'JUnit', 'Postman'],
     color: 'green',
   },
   {
     icon: GitBranch,
-    title: 'DevOps & CI/CD',
+    key: 'devops',
     skills: ['Git', 'GitLab CI/CD', 'Docker', 'Nexus', 'Vercel', 'GoDaddy', 'OVH'],
     color: 'orange',
   },
   {
     icon: Palette,
-    title: 'Design & UX',
+    key: 'design',
     skills: ['Figma', 'Adobe Photoshop', 'Sketch'],
     color: 'pink',
   },
   {
     icon: Shield,
-    title: 'Security',
+    key: 'security',
     skills: ['Keycloak', 'JWT'],
     color: 'yellow',
   },
-];
-
-const softSkills = [
-  'Problem-solving',
-  'Adaptability',
-  'Team collaboration',
-  'Communication',
-  'Creativity',
-  'Decision-making',
-  'Mentoring',
-];
-
-const languages = [
-  { name: 'Arabic', level: 'Native', percentage: 100 },
-  { name: 'English', level: 'Fluent (B2)', percentage: 80 },
-  { name: 'French', level: 'Fluent (B2)', percentage: 80 },
 ];
 
 function SkillCard({
@@ -97,6 +82,7 @@ function SkillCard({
   category: SkillCategory;
   index: number;
 }) {
+  const t = useTranslations('skills');
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-50px' });
 
@@ -128,7 +114,7 @@ function SkillCard({
         <category.icon className="w-6 h-6" />
       </div>
       <h3 className="text-lg font-bold text-day-text dark:text-night-text mb-3">
-        {category.title}
+        {t(`categories.${category.key}`)}
       </h3>
       <div className="flex flex-wrap gap-2">
         {category.skills.map((skill) => (
@@ -145,8 +131,15 @@ function SkillCard({
 }
 
 export function Skills() {
+  const t = useTranslations('skills');
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
+
+  const languages = [
+    { key: 'arabic', percentage: 100 },
+    { key: 'english', percentage: 80 },
+    { key: 'french', percentage: 80 },
+  ];
 
   return (
     <section id="skills" className="py-24 bg-day-bg-alt/50 dark:bg-night-bg-alt/50">
@@ -159,15 +152,15 @@ export function Skills() {
         >
           {/* Section Header */}
           <div className="flex items-center gap-4 mb-12">
-            <span className="text-day-accent dark:text-night-cyan font-mono">04.</span>
-            <h2 className="text-3xl sm:text-4xl font-bold">Skills</h2>
+            <span className="text-day-accent dark:text-night-cyan font-mono">{t('sectionNumber')}.</span>
+            <h2 className="text-3xl sm:text-4xl font-bold">{t('title')}</h2>
             <div className="flex-1 h-px bg-day-bg-highlight dark:bg-night-bg-highlight" />
           </div>
 
           {/* Technical Skills Grid */}
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
             {skillCategories.map((category, index) => (
-              <SkillCard key={category.title} category={category} index={index} />
+              <SkillCard key={category.key} category={category} index={index} />
             ))}
           </div>
 
@@ -183,18 +176,28 @@ export function Skills() {
               <div className="flex items-center gap-3 mb-4">
                 <Brain className="w-6 h-6 text-day-accent-alt dark:text-night-accent" />
                 <h3 className="text-lg font-bold text-day-text dark:text-night-text">
-                  Soft Skills
+                  {t('softSkills.title')}
                 </h3>
               </div>
               <div className="flex flex-wrap gap-2">
-                {softSkills.map((skill) => (
-                  <span
-                    key={skill}
-                    className="px-3 py-1.5 text-sm bg-day-accent-alt/10 dark:bg-night-accent/10 border border-day-accent-alt/20 dark:border-night-accent/20 rounded-full text-day-accent-alt dark:text-night-accent"
-                  >
-                    {skill}
-                  </span>
-                ))}
+                {[0, 1, 2, 3, 4, 5, 6].map((i) => {
+                  try {
+                    const skill = t(`softSkills.items.${i}`);
+                    if (skill && !skill.includes('items')) {
+                      return (
+                        <span
+                          key={i}
+                          className="px-3 py-1.5 text-sm bg-day-accent-alt/10 dark:bg-night-accent/10 border border-day-accent-alt/20 dark:border-night-accent/20 rounded-full text-day-accent-alt dark:text-night-accent"
+                        >
+                          {skill}
+                        </span>
+                      );
+                    }
+                    return null;
+                  } catch {
+                    return null;
+                  }
+                })}
               </div>
             </motion.div>
 
@@ -208,18 +211,18 @@ export function Skills() {
               <div className="flex items-center gap-3 mb-4">
                 <Languages className="w-6 h-6 text-day-accent dark:text-night-cyan" />
                 <h3 className="text-lg font-bold text-day-text dark:text-night-text">
-                  Languages
+                  {t('languages.title')}
                 </h3>
               </div>
               <div className="space-y-4">
                 {languages.map((lang) => (
-                  <div key={lang.name}>
+                  <div key={lang.key}>
                     <div className="flex justify-between mb-1">
                       <span className="text-sm font-medium text-day-text dark:text-night-text">
-                        {lang.name}
+                        {t(`languages.${lang.key}`)}
                       </span>
                       <span className="text-xs text-day-comment dark:text-night-comment">
-                        {lang.level}
+                        {t(`languages.${lang.key}Level`)}
                       </span>
                     </div>
                     <div className="h-2 rounded-full bg-day-bg-highlight dark:bg-night-bg-highlight overflow-hidden">

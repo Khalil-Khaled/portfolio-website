@@ -1,0 +1,220 @@
+{
+  "meta": {
+    "title": "Khalil Khaled | Frontend Engineer",
+    "description": "Frontend engineer with 5+ years of experience building scalable, modern web applications using Angular, React, and TypeScript."
+  },
+  "nav": {
+    "about": "About",
+    "experience": "Experience",
+    "projects": "Projects",
+    "skills": "Skills",
+    "contact": "Contact",
+    "cv": "CV"
+  },
+  "hero": {
+    "available": "Available for opportunities",
+    "greeting": "Hi, I'm",
+    "title": "Frontend Engineer",
+    "titleSeparator": "|",
+    "subtitle": "Angular Expert",
+    "location": "Tunis, Tunisia · Open to relocation",
+    "description": "Building scalable, modern web applications with {years} of experience. Passionate about UI performance, developer experience, and clean architecture.",
+    "yearsExperience": "5+ years",
+    "cta": {
+      "contact": "Get in Touch",
+      "projects": "View Projects"
+    },
+    "scroll": "scroll"
+  },
+  "about": {
+    "sectionNumber": "01",
+    "title": "About Me",
+    "paragraph1": "I'm a frontend engineer passionate about building <accent>scalable, modern web applications</accent> that deliver exceptional user experiences. With expertise in Angular and a strong foundation in React and TypeScript, I bring ideas to life with clean, maintainable code.",
+    "paragraph2": "Currently at <company>VERMEG</company>, I lead frontend development for a low-code platform, where I've designed a <accent>reusable component library of 75+ widgets</accent> and mentored junior developers. I'm always exploring new technologies and best practices to level up my craft.",
+    "paragraph3": "When I'm not coding, you'll find me contributing to open-source, exploring AI/ML certifications, or planning my next adventure. I'm open to international relocation and excited about new challenges in dynamic, product-driven teams.",
+    "techTitle": "Technologies I work with daily:",
+    "stats": {
+      "years": "Years Experience",
+      "components": "Components Built",
+      "bugs": "Bugs Squashed",
+      "languages": "Languages Spoken"
+    },
+    "imagePlaceholder": "profile-image.jpg"
+  },
+  "experience": {
+    "sectionNumber": "02",
+    "title": "Experience",
+    "jobs": {
+      "vermeg_lead": {
+        "title": "Software Engineer – Frontend (Low-Code Platform)",
+        "company": "VERMEG",
+        "location": "Tunisia",
+        "period": "Jan 2024 – Present",
+        "description": [
+          "Led code reviews and mentored 2 junior developers, improving code quality and onboarding efficiency.",
+          "Designed and developed a reusable Angular component library (75+ widgets), reducing duplication by 35%.",
+          "Migrated GitLab CI/CD pipelines to cloud, achieving 65% faster build times and 30% fewer failures.",
+          "Contributed to functional design and actively participated in Agile ceremonies."
+        ]
+      },
+      "vermeg_dev": {
+        "title": "Frontend Developer – Financial Products",
+        "company": "VERMEG",
+        "location": "Tunisia",
+        "period": "Oct 2020 – Jan 2024",
+        "description": [
+          "Fixed 160+ bugs and delivered high-impact features across multiple Angular-based financial apps.",
+          "Refactored legacy modules and contributed to Angular version upgrades (v11 to v16).",
+          "Achieved 95% test coverage with unit and E2E testing (Jest, Cypress).",
+          "Collaborated with UI/UX teams to convert Figma prototypes into scalable, responsive interfaces."
+        ]
+      },
+      "transcom": {
+        "title": "Customer Service Representative – PayPal",
+        "company": "TRANSCOM",
+        "location": "Tunisia",
+        "period": "Oct 2017 – Apr 2020",
+        "description": [
+          "Handled customer calls and support inquiries in English and French.",
+          "Managed PayPal claims, disputes, and technical issues related to e-commerce integrations.",
+          "Assisted in onboarding new hires through peer mentoring and training.",
+          "Achieved 90%+ in KPIs related to resolution time, empathy, and customer satisfaction."
+        ]
+      },
+      "stellar": {
+        "title": "Software Developer Intern – Game Development",
+        "company": "Stellar VFX",
+        "location": "Tunisia",
+        "period": "Feb 2017 – Jul 2017",
+        "description": [
+          "Built interactive game mechanics and UI with performance optimizations.",
+          "Integrated assets and performed functional testing based on gameplay feedback."
+        ]
+      }
+    }
+  },
+  "projects": {
+    "sectionNumber": "03",
+    "title": "Projects",
+    "featured": "Featured",
+    "viewLive": "Live",
+    "viewCode": "Code",
+    "screenshotPlaceholder": "screenshot.png",
+    "items": {
+      "veggo": {
+        "title": "VEGGO – Low-Code Platform",
+        "description": "Enterprise low-code platform for building financial applications. Led frontend development, designed 75+ reusable Angular widgets, and established component architecture patterns.",
+        "period": "2024 - Present"
+      },
+      "pijiz": {
+        "title": "E-commerce Store – Pijiz",
+        "description": "Shopify-based e-commerce platform with custom theme development, multi-language support, payment integration, and SEO optimization.",
+        "period": "May 2024"
+      },
+      "dubai": {
+        "title": "Visit Dubai UI Redesign",
+        "description": "Freelance project to improve the UI/UX of Visit Dubai website. Enhanced page structure, navigation, and implemented responsive design fixes.",
+        "period": "Jan 2024 - Feb 2024"
+      },
+      "banking": {
+        "title": "Banking App Migration",
+        "description": "Led the full framework upgrade from Angular v11 to v16 for a banking application. Refactored UI components and migrated custom themes.",
+        "period": "Nov 2023 - Jan 2024"
+      },
+      "nrg": {
+        "title": "NRG Global Power – Corporate Website",
+        "description": "Built and deployed a corporate WordPress website with business email setup, SEO optimization, and GoDaddy hosting configuration.",
+        "period": "Oct 2023"
+      }
+    }
+  },
+  "skills": {
+    "sectionNumber": "04",
+    "title": "Skills",
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend & APIs",
+      "testing": "Testing",
+      "devops": "DevOps & CI/CD",
+      "design": "Design & UX",
+      "security": "Security"
+    },
+    "softSkills": {
+      "title": "Soft Skills",
+      "items": ["Problem-solving", "Adaptability", "Team collaboration", "Communication", "Creativity", "Decision-making", "Mentoring"]
+    },
+    "languages": {
+      "title": "Languages",
+      "arabic": "Arabic",
+      "arabicLevel": "Native",
+      "english": "English",
+      "englishLevel": "Fluent (B2)",
+      "french": "French",
+      "frenchLevel": "Fluent (B2)"
+    }
+  },
+  "certifications": {
+    "sectionNumber": "05",
+    "title": "Certifications & Education",
+    "certificationsTitle": "Certifications",
+    "educationTitle": "Education",
+    "items": {
+      "genai": {
+        "title": "Oracle Cloud Infrastructure Generative AI Professional",
+        "issuer": "Oracle",
+        "date": "October 2025"
+      },
+      "aifoundations": {
+        "title": "Oracle Cloud Infrastructure Certified AI Foundations Associate",
+        "issuer": "Oracle",
+        "date": "October 2025"
+      },
+      "java": {
+        "title": "Oracle Certified Professional: Java SE 11 Developer",
+        "issuer": "Oracle",
+        "date": "July 2025"
+      }
+    },
+    "education": {
+      "esprit": {
+        "degree": "Engineering Degree – Software Engineering",
+        "institution": "ESPRIT University",
+        "location": "Tunisia",
+        "year": "2024"
+      },
+      "isamm": {
+        "degree": "Bachelor's Degree in Computer Science",
+        "institution": "Higher Institute of Multimedia Arts",
+        "location": "Tunisia",
+        "year": "2017"
+      }
+    }
+  },
+  "contact": {
+    "sectionNumber": "06",
+    "title": "Get in Touch",
+    "subtitle": "Let's Work Together",
+    "description": "I'm currently open to new opportunities and exciting projects. Whether you have a question, want to discuss a potential collaboration, or just want to say hi, my inbox is always open!",
+    "email": "Email",
+    "phone": "Phone",
+    "location": "Location",
+    "findOnline": "Find me online:",
+    "readyTitle": "Ready to Chat?",
+    "readyDescription": "I typically respond within 24 hours. Looking forward to hearing from you!",
+    "sendEmail": "Send Email",
+    "orReachOut": "Or reach out on"
+  },
+  "footer": {
+    "copyright": "© {year} Khalil Khaled. All rights reserved.",
+    "builtWith": "Built with",
+    "using": "using"
+  },
+  "theme": {
+    "switchToLight": "Switch to light mode",
+    "switchToDark": "Switch to dark mode"
+  },
+  "language": {
+    "switchTo": "Français",
+    "current": "EN"
+  }
+}

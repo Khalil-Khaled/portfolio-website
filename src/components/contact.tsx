@@ -1,47 +1,9 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
 import { motion, useInView } from 'framer-motion';
 import { useRef, useState } from 'react';
 import { Mail, Phone, MapPin, Linkedin, Github, Send, Copy, Check } from 'lucide-react';
-
-const contactInfo = [
-  {
-    icon: Mail,
-    label: 'Email',
-    value: 'khalilkhaled1995@gmail.com',
-    href: 'mailto:khalilkhaled1995@gmail.com',
-    copyable: true,
-  },
-  {
-    icon: Phone,
-    label: 'Phone',
-    value: '+216 20233656',
-    href: 'tel:+21620233656',
-    copyable: true,
-  },
-  {
-    icon: MapPin,
-    label: 'Location',
-    value: 'Tunis, Tunisia',
-    href: 'https://maps.google.com/?q=Tunis,Tunisia',
-    copyable: false,
-  },
-];
-
-const socialLinks = [
-  {
-    icon: Linkedin,
-    label: 'LinkedIn',
-    href: 'https://linkedin.com/in/khalil-khaled',
-    username: 'khalil-khaled',
-  },
-  {
-    icon: Github,
-    label: 'GitHub',
-    href: 'https://github.com/Khalil-Khaled',
-    username: 'Khalil-Khaled',
-  },
-];
 
 function CopyButton({ text }: { text: string }) {
   const [copied, setCopied] = useState(false);
@@ -70,8 +32,46 @@ function CopyButton({ text }: { text: string }) {
 }
 
 export function Contact() {
+  const t = useTranslations('contact');
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
+
+  const contactInfo = [
+    {
+      icon: Mail,
+      labelKey: 'email',
+      value: 'khalilkhaled1995@gmail.com',
+      href: 'mailto:khalilkhaled1995@gmail.com',
+      copyable: true,
+    },
+    {
+      icon: Phone,
+      labelKey: 'phone',
+      value: '+216 20233656',
+      href: 'tel:+21620233656',
+      copyable: true,
+    },
+    {
+      icon: MapPin,
+      labelKey: 'location',
+      value: 'Tunis, Tunisia',
+      href: 'https://maps.google.com/?q=Tunis,Tunisia',
+      copyable: false,
+    },
+  ];
+
+  const socialLinks = [
+    {
+      icon: Linkedin,
+      label: 'LinkedIn',
+      href: 'https://linkedin.com/in/khalil-khaled',
+    },
+    {
+      icon: Github,
+      label: 'GitHub',
+      href: 'https://github.com/Khalil-Khaled',
+    },
+  ];
 
   return (
     <section id="contact" className="py-24 bg-day-bg-alt/50 dark:bg-night-bg-alt/50">
@@ -84,8 +84,8 @@ export function Contact() {
         >
           {/* Section Header */}
           <div className="flex items-center gap-4 mb-12">
-            <span className="text-day-accent dark:text-night-cyan font-mono">06.</span>
-            <h2 className="text-3xl sm:text-4xl font-bold">Get in Touch</h2>
+            <span className="text-day-accent dark:text-night-cyan font-mono">{t('sectionNumber')}.</span>
+            <h2 className="text-3xl sm:text-4xl font-bold">{t('title')}</h2>
             <div className="flex-1 h-px bg-day-bg-highlight dark:bg-night-bg-highlight" />
           </div>
 
@@ -98,12 +98,10 @@ export function Contact() {
               className="text-center mb-12"
             >
               <h3 className="text-2xl sm:text-3xl font-bold text-day-text dark:text-night-text mb-4">
-                Let&apos;s Work Together
+                {t('subtitle')}
               </h3>
               <p className="text-day-text/70 dark:text-night-text/70 max-w-2xl mx-auto">
-                I&apos;m currently open to new opportunities and exciting projects.
-                Whether you have a question, want to discuss a potential collaboration,
-                or just want to say hi, my inbox is always open!
+                {t('description')}
               </p>
             </motion.div>
 
@@ -117,7 +115,7 @@ export function Contact() {
               >
                 {contactInfo.map((info, index) => (
                   <motion.div
-                    key={info.label}
+                    key={info.labelKey}
                     className="bento-card group"
                     initial={{ opacity: 0, y: 20 }}
                     animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -130,7 +128,7 @@ export function Contact() {
                       </div>
                       <div className="flex-1 min-w-0">
                         <p className="text-xs text-day-comment dark:text-night-comment font-mono mb-1">
-                          {info.label}
+                          {t(info.labelKey)}
                         </p>
                         <a
                           href={info.href}
@@ -149,7 +147,7 @@ export function Contact() {
                 {/* Social Links */}
                 <div className="pt-4">
                   <p className="text-sm font-mono text-day-comment dark:text-night-comment mb-3">
-                    Find me online:
+                    {t('findOnline')}
                   </p>
                   <div className="flex gap-4">
                     {socialLinks.map((social) => (
@@ -184,11 +182,10 @@ export function Contact() {
                     </div>
                   </div>
                   <h4 className="text-xl font-bold text-day-text dark:text-night-text mb-2">
-                    Ready to Chat?
+                    {t('readyTitle')}
                   </h4>
                   <p className="text-sm text-day-text/70 dark:text-night-text/70">
-                    I typically respond within 24 hours.
-                    Looking forward to hearing from you!
+                    {t('readyDescription')}
                   </p>
                 </div>
 
@@ -199,11 +196,11 @@ export function Contact() {
                   whileTap={{ scale: 0.95 }}
                 >
                   <Mail className="w-5 h-5" />
-                  Send Email
+                  {t('sendEmail')}
                 </motion.a>
 
                 <p className="mt-4 text-xs text-day-comment dark:text-night-comment">
-                  Or reach out on{' '}
+                  {t('orReachOut')}{' '}
                   <a
                     href="https://linkedin.com/in/khalil-khaled"
                     target="_blank"

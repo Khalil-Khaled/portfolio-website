@@ -31,3 +31,5 @@ yarn-error.log*
 # TypeScript
 *.tsbuildinfo
 next-env.d.ts
+.prompts/.git-setup-done
+.prompts/.migration-log.json

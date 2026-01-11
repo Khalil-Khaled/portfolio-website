@@ -1,0 +1,220 @@
+{
+  "meta": {
+    "title": "Khalil Khaled | Ingénieur Frontend",
+    "description": "Ingénieur frontend avec plus de 5 ans d'expérience dans la création d'applications web modernes et évolutives avec Angular, React et TypeScript."
+  },
+  "nav": {
+    "about": "À propos",
+    "experience": "Expérience",
+    "projects": "Projets",
+    "skills": "Compétences",
+    "contact": "Contact",
+    "cv": "CV"
+  },
+  "hero": {
+    "available": "Disponible pour de nouvelles opportunités",
+    "greeting": "Bonjour, je suis",
+    "title": "Ingénieur Frontend",
+    "titleSeparator": "|",
+    "subtitle": "Expert Angular",
+    "location": "Tunis, Tunisie · Ouvert à la relocalisation",
+    "description": "Création d'applications web modernes et évolutives avec {years} d'expérience. Passionné par la performance UI, l'expérience développeur et l'architecture propre.",
+    "yearsExperience": "5+ ans",
+    "cta": {
+      "contact": "Me Contacter",
+      "projects": "Voir les Projets"
+    },
+    "scroll": "défiler"
+  },
+  "about": {
+    "sectionNumber": "01",
+    "title": "À Propos de Moi",
+    "paragraph1": "Je suis un ingénieur frontend passionné par la création d'<accent>applications web modernes et évolutives</accent> qui offrent des expériences utilisateur exceptionnelles. Avec une expertise en Angular et une solide base en React et TypeScript, je donne vie aux idées avec un code propre et maintenable.",
+    "paragraph2": "Actuellement chez <company>VERMEG</company>, je dirige le développement frontend d'une plateforme low-code, où j'ai conçu une <accent>bibliothèque de composants réutilisables de 75+ widgets</accent> et mentoré des développeurs juniors. J'explore constamment de nouvelles technologies et bonnes pratiques pour améliorer mes compétences.",
+    "paragraph3": "Quand je ne code pas, vous me trouverez en train de contribuer à l'open-source, d'explorer des certifications AI/ML, ou de planifier ma prochaine aventure. Je suis ouvert à la relocalisation internationale et enthousiaste face aux nouveaux défis dans des équipes dynamiques orientées produit.",
+    "techTitle": "Technologies que j'utilise quotidiennement :",
+    "stats": {
+      "years": "Ans d'Expérience",
+      "components": "Composants Créés",
+      "bugs": "Bugs Résolus",
+      "languages": "Langues Parlées"
+    },
+    "imagePlaceholder": "profile-image.jpg"
+  },
+  "experience": {
+    "sectionNumber": "02",
+    "title": "Expérience",
+    "jobs": {
+      "vermeg_lead": {
+        "title": "Ingénieur Logiciel – Frontend (Plateforme Low-Code)",
+        "company": "VERMEG",
+        "location": "Tunisie",
+        "period": "Jan 2024 – Présent",
+        "description": [
+          "Direction des revues de code et mentorat de 2 développeurs juniors, améliorant la qualité du code et l'efficacité de l'intégration.",
+          "Conception et développement d'une bibliothèque de composants Angular réutilisables (75+ widgets), réduisant la duplication de 35%.",
+          "Migration des pipelines GitLab CI/CD vers le cloud, atteignant 65% de temps de build plus rapides et 30% moins d'échecs.",
+          "Contribution à la conception fonctionnelle et participation active aux cérémonies Agile."
+        ]
+      },
+      "vermeg_dev": {
+        "title": "Développeur Frontend – Produits Financiers",
+        "company": "VERMEG",
+        "location": "Tunisie",
+        "period": "Oct 2020 – Jan 2024",
+        "description": [
+          "Correction de 160+ bugs et livraison de fonctionnalités à fort impact sur plusieurs applications financières Angular.",
+          "Refactorisation de modules legacy et contribution aux mises à niveau Angular (v11 à v16).",
+          "Atteinte de 95% de couverture de tests avec tests unitaires et E2E (Jest, Cypress).",
+          "Collaboration avec les équipes UI/UX pour convertir les prototypes Figma en interfaces réactives et évolutives."
+        ]
+      },
+      "transcom": {
+        "title": "Représentant Service Client – PayPal",
+        "company": "TRANSCOM",
+        "location": "Tunisie",
+        "period": "Oct 2017 – Avr 2020",
+        "description": [
+          "Gestion des appels clients et demandes de support en anglais et français.",
+          "Gestion des réclamations PayPal, litiges et problèmes techniques liés aux intégrations e-commerce.",
+          "Assistance à l'intégration des nouvelles recrues par le mentorat et la formation.",
+          "Atteinte de 90%+ dans les KPIs liés au temps de résolution, l'empathie et la satisfaction client."
+        ]
+      },
+      "stellar": {
+        "title": "Développeur Logiciel Stagiaire – Développement de Jeux",
+        "company": "Stellar VFX",
+        "location": "Tunisie",
+        "period": "Fév 2017 – Juil 2017",
+        "description": [
+          "Création de mécaniques de jeu interactives et d'UI avec optimisations de performance.",
+          "Intégration d'assets et tests fonctionnels basés sur les retours de gameplay."
+        ]
+      }
+    }
+  },
+  "projects": {
+    "sectionNumber": "03",
+    "title": "Projets",
+    "featured": "En vedette",
+    "viewLive": "Voir",
+    "viewCode": "Code",
+    "screenshotPlaceholder": "screenshot.png",
+    "items": {
+      "veggo": {
+        "title": "VEGGO – Plateforme Low-Code",
+        "description": "Plateforme low-code d'entreprise pour créer des applications financières. Direction du développement frontend, conception de 75+ widgets Angular réutilisables et établissement de patterns d'architecture de composants.",
+        "period": "2024 - Présent"
+      },
+      "pijiz": {
+        "title": "Boutique E-commerce – Pijiz",
+        "description": "Plateforme e-commerce basée sur Shopify avec développement de thème personnalisé, support multilingue, intégration de paiement et optimisation SEO.",
+        "period": "Mai 2024"
+      },
+      "dubai": {
+        "title": "Refonte UI Visit Dubai",
+        "description": "Projet freelance pour améliorer l'UI/UX du site Visit Dubai. Amélioration de la structure des pages, navigation et implémentation de corrections de design responsive.",
+        "period": "Jan 2024 - Fév 2024"
+      },
+      "banking": {
+        "title": "Migration App Bancaire",
+        "description": "Direction de la mise à niveau complète du framework d'Angular v11 à v16 pour une application bancaire. Refactorisation des composants UI et migration des thèmes personnalisés.",
+        "period": "Nov 2023 - Jan 2024"
+      },
+      "nrg": {
+        "title": "NRG Global Power – Site Corporate",
+        "description": "Création et déploiement d'un site WordPress corporate avec configuration d'email professionnel, optimisation SEO et configuration d'hébergement GoDaddy.",
+        "period": "Oct 2023"
+      }
+    }
+  },
+  "skills": {
+    "sectionNumber": "04",
+    "title": "Compétences",
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend & APIs",
+      "testing": "Tests",
+      "devops": "DevOps & CI/CD",
+      "design": "Design & UX",
+      "security": "Sécurité"
+    },
+    "softSkills": {
+      "title": "Soft Skills",
+      "items": ["Résolution de problèmes", "Adaptabilité", "Travail d'équipe", "Communication", "Créativité", "Prise de décision", "Mentorat"]
+    },
+    "languages": {
+      "title": "Langues",
+      "arabic": "Arabe",
+      "arabicLevel": "Natif",
+      "english": "Anglais",
+      "englishLevel": "Courant (B2)",
+      "french": "Français",
+      "frenchLevel": "Courant (B2)"
+    }
+  },
+  "certifications": {
+    "sectionNumber": "05",
+    "title": "Certifications & Formation",
+    "certificationsTitle": "Certifications",
+    "educationTitle": "Formation",
+    "items": {
+      "genai": {
+        "title": "Oracle Cloud Infrastructure Generative AI Professional",
+        "issuer": "Oracle",
+        "date": "Octobre 2025"
+      },
+      "aifoundations": {
+        "title": "Oracle Cloud Infrastructure Certified AI Foundations Associate",
+        "issuer": "Oracle",
+        "date": "Octobre 2025"
+      },
+      "java": {
+        "title": "Oracle Certified Professional: Java SE 11 Developer",
+        "issuer": "Oracle",
+        "date": "Juillet 2025"
+      }
+    },
+    "education": {
+      "esprit": {
+        "degree": "Diplôme d'Ingénieur – Génie Logiciel",
+        "institution": "ESPRIT University",
+        "location": "Tunisie",
+        "year": "2024"
+      },
+      "isamm": {
+        "degree": "Licence en Informatique",
+        "institution": "Institut Supérieur des Arts Multimédia",
+        "location": "Tunisie",
+        "year": "2017"
+      }
+    }
+  },
+  "contact": {
+    "sectionNumber": "06",
+    "title": "Me Contacter",
+    "subtitle": "Travaillons Ensemble",
+    "description": "Je suis actuellement ouvert aux nouvelles opportunités et projets passionnants. Que vous ayez une question, souhaitiez discuter d'une collaboration potentielle, ou simplement dire bonjour, ma boîte de réception est toujours ouverte !",
+    "email": "Email",
+    "phone": "Téléphone",
+    "location": "Localisation",
+    "findOnline": "Retrouvez-moi en ligne :",
+    "readyTitle": "Prêt à Discuter ?",
+    "readyDescription": "Je réponds généralement sous 24 heures. Au plaisir de vous lire !",
+    "sendEmail": "Envoyer un Email",
+    "orReachOut": "Ou contactez-moi sur"
+  },
+  "footer": {
+    "copyright": "© {year} Khalil Khaled. Tous droits réservés.",
+    "builtWith": "Construit avec",
+    "using": "avec"
+  },
+  "theme": {
+    "switchToLight": "Passer en mode clair",
+    "switchToDark": "Passer en mode sombre"
+  },
+  "language": {
+    "switchTo": "English",
+    "current": "FR"
+  }
+}

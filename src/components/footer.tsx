@@ -1,9 +1,11 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
 import { Heart, Github, Linkedin, Mail } from 'lucide-react';
 
 export function Footer() {
+  const t = useTranslations('footer');
   const currentYear = new Date().getFullYear();
 
   return (
@@ -22,9 +24,7 @@ export function Footer() {
               <span className="text-day-accent dark:text-night-cyan">{'/>'}</span>
             </motion.a>
             <span className="hidden sm:inline">•</span>
-            <span>
-              © {currentYear} Khalil Khaled. All rights reserved.
-            </span>
+            <span>{t('copyright', { year: currentYear })}</span>
           </div>
 
           {/* Social Links */}
@@ -57,9 +57,9 @@ export function Footer() {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5 }}
         >
-          <span>Built with </span>
+          <span>{t('builtWith')} </span>
           <Heart className="w-3 h-3 inline text-day-red dark:text-night-red" />
-          <span> using </span>
+          <span> {t('using')} </span>
           <span className="text-day-accent dark:text-night-cyan">Next.js</span>
           <span>, </span>
           <span className="text-day-accent dark:text-night-cyan">Tailwind CSS</span>
