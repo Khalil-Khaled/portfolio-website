@@ -1,7 +1,8 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
+import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Download } from 'lucide-react';
 import { ThemeToggle } from './theme-toggle';
@@ -9,15 +10,25 @@ import { LanguageSwitcher } from './language-switcher';
 
 export function Navigation() {
   const t = useTranslations('nav');
+  const locale = useLocale();
+  const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
+  // English uses '/' (no prefix), other locales use '/{locale}/'
+  const isHomePage = pathname === '/' || pathname === `/${locale}` || pathname === `/${locale}/`;
+
+  // On homepage: just use hash. On other pages: full path with hash.
+  // For default locale (en), href to '/' instead of '/en/'
+  const homeHref = locale === 'en' ? '/' : `/${locale}/`;
+  const getHref = (anchor: string) => isHomePage ? `#${anchor}` : `${homeHref}#${anchor}`;
+
   const navItems = [
-    { name: t('about'), href: '#about' },
-    { name: t('experience'), href: '#experience' },
-    { name: t('projects'), href: '#projects' },
-    { name: t('skills'), href: '#skills' },
-    { name: t('contact'), href: '#contact' },
+    { name: t('about'), href: getHref('about') },
+    { name: t('experience'), href: getHref('experience') },
+    { name: t('projects'), href: getHref('projects') },
+    { name: t('skills'), href: getHref('skills') },
+    { name: t('contact'), href: getHref('contact') },
   ];
 
   useEffect(() => {
@@ -45,7 +56,7 @@ export function Navigation() {
           <div className="flex items-center justify-between">
             {/* Logo */}
             <motion.a
-              href="#"
+              href={isHomePage ? '#' : homeHref}
               className="text-xl font-bold font-mono"
               whileHover={{ scale: 1.05 }}
             >
