@@ -38,28 +38,22 @@ export function About() {
             {/* Text Content */}
             <div className="space-y-6">
               <p className="text-day-text/80 dark:text-night-text/80 leading-relaxed">
-                I&apos;m a frontend engineer passionate about building{' '}
+                {t('intro')}{' '}
                 <span className="text-day-accent dark:text-night-cyan font-medium">
-                  scalable, modern web applications
+                  {t('highlight1')}
                 </span>{' '}
-                that deliver exceptional user experiences. With expertise in Angular and a
-                strong foundation in React and TypeScript, I bring ideas to life with clean,
-                maintainable code.
+                {t('intro2')}
               </p>
               <p className="text-day-text/80 dark:text-night-text/80 leading-relaxed">
-                Currently at <span className="font-medium">VERMEG</span>, I lead frontend
-                development for a low-code platform, where I&apos;ve designed a{' '}
+                {t('current1')} <span className="font-medium">{t('company')}</span>
+                {t('current2')}{' '}
                 <span className="text-day-accent dark:text-night-cyan font-medium">
-                  reusable component library of 75+ widgets
+                  {t('highlight2')}
                 </span>{' '}
-                and mentored junior developers. I&apos;m always exploring new technologies
-                and best practices to level up my craft.
+                {t('current3')}
               </p>
               <p className="text-day-text/80 dark:text-night-text/80 leading-relaxed">
-                When I&apos;m not coding, you&apos;ll find me contributing to open-source,
-                exploring AI/ML certifications, or planning my next adventure.
-                I&apos;m open to international relocation and excited about new challenges
-                in dynamic, product-driven teams.
+                {t('personal')}
               </p>
 
               {/* Tech Stack Highlight */}

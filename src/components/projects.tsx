@@ -17,10 +17,10 @@ interface ProjectData {
 
 const projectsData: ProjectData[] = [
   {
-    key: 'veggo',
+    key: 'lowCode',
     technologies: ['Angular', 'TypeScript', 'RxJS', 'NgRx', 'SASS', 'Storybook'],
     featured: true,
-    detailPage: '/projects/veggo',
+    detailPage: '/projects/low-code',
   },
   {
     key: 'pijiz',

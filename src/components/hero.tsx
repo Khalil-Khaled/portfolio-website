@@ -100,9 +100,11 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.4 }}
             className="text-lg text-day-text/70 dark:text-night-text/70 max-w-2xl mx-auto mb-10 leading-relaxed"
           >
-            {t('description', { years: '' })}
-            <span className="text-day-accent dark:text-night-cyan font-medium">{t('yearsExperience')}</span>
-            {t('description', { years: '' }).includes('{years}') ? '' : '.'}
+            {t.rich('description', {
+              years: (chunks) => (
+                <span className="text-day-accent dark:text-night-cyan font-medium">{chunks}</span>
+              ),
+            })}
           </motion.p>
 
           {/* CTA Buttons */}

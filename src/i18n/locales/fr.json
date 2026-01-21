@@ -18,8 +18,7 @@
     "titleSeparator": "|",
     "subtitle": "Expert Angular",
     "location": "Tunis, Tunisie · Ouvert à la relocalisation",
-    "description": "Création d'applications web modernes et évolutives avec {years} d'expérience. Passionné par la performance UI, l'expérience développeur et l'architecture propre.",
-    "yearsExperience": "5+ ans",
+    "description": "Création d'applications web modernes et évolutives avec <years>5+ ans</years> d'expérience. Passionné par la performance UI, l'expérience développeur et l'architecture propre.",
     "cta": {
       "contact": "Me Contacter",
       "projects": "Voir les Projets"
@@ -29,9 +28,15 @@
   "about": {
     "sectionNumber": "01",
     "title": "À Propos de Moi",
-    "paragraph1": "Je suis un ingénieur frontend passionné par la création d'<accent>applications web modernes et évolutives</accent> qui offrent des expériences utilisateur exceptionnelles. Avec une expertise en Angular et une solide base en React et TypeScript, je donne vie aux idées avec un code propre et maintenable.",
-    "paragraph2": "Actuellement chez <company>VERMEG</company>, je dirige le développement frontend d'une plateforme low-code, où j'ai conçu une <accent>bibliothèque de composants réutilisables de 75+ widgets</accent> et mentoré des développeurs juniors. J'explore constamment de nouvelles technologies et bonnes pratiques pour améliorer mes compétences.",
-    "paragraph3": "Quand je ne code pas, vous me trouverez en train de contribuer à l'open-source, d'explorer des certifications AI/ML, ou de planifier ma prochaine aventure. Je suis ouvert à la relocalisation internationale et enthousiaste face aux nouveaux défis dans des équipes dynamiques orientées produit.",
+    "intro": "Je suis un ingénieur frontend passionné par la création d'",
+    "highlight1": "applications web modernes et évolutives",
+    "intro2": "qui offrent des expériences utilisateur exceptionnelles. Avec une expertise en Angular et une solide base en React et TypeScript, je donne vie aux idées avec un code propre et maintenable.",
+    "current1": "Actuellement chez",
+    "company": "VERMEG",
+    "current2": ", je dirige le développement frontend d'une plateforme low-code, où j'ai conçu une",
+    "highlight2": "bibliothèque de composants réutilisables de 75+ widgets",
+    "current3": "et mentoré des développeurs juniors. J'explore constamment de nouvelles technologies et bonnes pratiques pour améliorer mes compétences.",
+    "personal": "Quand je ne code pas, vous me trouverez en train de contribuer à l'open-source, d'explorer des certifications AI/ML, ou de planifier ma prochaine aventure. Je suis ouvert à la relocalisation internationale et enthousiaste face aux nouveaux défis dans des équipes dynamiques orientées produit.",
     "techTitle": "Technologies que j'utilise quotidiennement :",
     "stats": {
       "years": "Ans d'Expérience",
@@ -102,8 +107,8 @@
     "viewDetails": "Voir Détails",
     "screenshotPlaceholder": "screenshot.png",
     "items": {
-      "veggo": {
-        "title": "VEGGO – Plateforme Low-Code",
+      "lowCode": {
+        "title": "Plateforme Low-Code Entreprise",
         "description": "Plateforme low-code d'entreprise pour créer des applications financières. Direction du développement frontend, conception de 75+ widgets Angular réutilisables et établissement de patterns d'architecture de composants.",
         "period": "2024 - Présent"
       },
@@ -229,20 +234,50 @@
     "techStack": "Technologies",
     "viewLive": "Voir le Site",
     "viewCode": "Voir le Code",
-    "veggo": {
-      "challenge": "VERMEG avait besoin d'une plateforme low-code moderne permettant aux utilisateurs métier de créer des applications financières sans connaissances techniques approfondies. Les outils existants étaient obsolètes, difficiles à maintenir et manquaient de flexibilité pour les workflows financiers complexes.",
-      "solution": "J'ai dirigé le développement frontend de VEGGO, concevant et implémentant une bibliothèque de composants complète. L'architecture s'est concentrée sur la réutilisabilité, l'accessibilité et la performance, permettant aux utilisateurs de glisser-déposer des widgets pré-construits pour créer des applications sophistiquées.",
-      "results": "La plateforme alimente maintenant plusieurs clients entreprise, réduisant le temps de développement d'applications de 60%. La bibliothèque de composants compte plus de 75 widgets avec 95% de couverture de tests, et l'équipe s'est agrandie tout en maintenant la qualité du code grâce aux patterns et à la documentation que j'ai établis."
+    "lowCode": {
+      "role": "Lead Développeur Frontend",
+      "duration": "Jan 2024 - Présent",
+      "challenge": "L'entreprise avait besoin d'une plateforme low-code moderne permettant aux utilisateurs métier de créer des applications financières sans connaissances techniques approfondies. Les outils existants étaient obsolètes, difficiles à maintenir et manquaient de flexibilité pour les workflows financiers complexes.",
+      "solution": "J'ai dirigé le développement frontend de la plateforme, concevant et implémentant une bibliothèque de composants complète. L'architecture s'est concentrée sur la réutilisabilité, l'accessibilité et la performance, permettant aux utilisateurs de glisser-déposer des widgets pré-construits pour créer des applications sophistiquées.",
+      "results": "La plateforme alimente maintenant plusieurs clients entreprise, réduisant le temps de développement d'applications de 60%. La bibliothèque de composants compte plus de 75 widgets avec 95% de couverture de tests, et l'équipe s'est agrandie tout en maintenant la qualité du code grâce aux patterns et à la documentation que j'ai établis.",
+      "highlights": [
+        "Conception et développement de 75+ widgets Angular réutilisables",
+        "Établissement de patterns d'architecture de composants adoptés dans toute l'organisation",
+        "Mentorat de 2 développeurs juniors, améliorant la vélocité de l'équipe de 25%",
+        "Atteinte de 95% de couverture de tests avec tests unitaires et E2E",
+        "Migration des pipelines CI/CD vers le cloud, réduisant les temps de build de 65%",
+        "Création de documentation complète et stories Storybook pour tous les composants"
+      ]
     },
     "pijiz": {
+      "role": "Développeur Full Stack",
+      "duration": "Mai 2024",
       "challenge": "Le client avait besoin d'une boutique e-commerce professionnelle capable de gérer plusieurs langues, d'intégrer différents modes de paiement et de bien se positionner sur les moteurs de recherche. La boutique devait être facile à gérer et refléter l'esthétique moderne de la marque.",
       "solution": "Construction d'une boutique Shopify personnalisée avec un thème adapté à l'identité de la marque. Implémentation du support multilingue pour les clients internationaux, intégration de passerelles de paiement locales et internationales, et optimisation de chaque page pour le SEO incluant les balises meta, les données structurées et la vitesse de chargement.",
-      "results": "La boutique a été lancée avec succès avec une amélioration de 40% des temps de chargement par rapport au template original. Les optimisations SEO ont conduit à des classements en première page Google pour les termes produits clés dans les 3 mois suivant le lancement."
+      "results": "La boutique a été lancée avec succès avec une amélioration de 40% des temps de chargement par rapport au template original. Les optimisations SEO ont conduit à des classements en première page Google pour les termes produits clés dans les 3 mois suivant le lancement.",
+      "highlights": [
+        "Création d'un thème Shopify personnalisé correspondant à l'identité de la marque",
+        "Implémentation du support multilingue (Arabe, Anglais, Français)",
+        "Intégration de plusieurs passerelles de paiement incluant des options locales",
+        "Optimisation de la vitesse de page avec un score de 90+ sur Google PageSpeed",
+        "Configuration de Google Analytics et du suivi des conversions",
+        "Configuration du domaine personnalisé et de l'email professionnel"
+      ]
     },
     "banking": {
+      "role": "Lead Développeur Frontend",
+      "duration": "Nov 2023 - Jan 2024",
       "challenge": "Une application bancaire majeure fonctionnait sur Angular v11, qui approchait de sa fin de vie. La base de code avait accumulé de la dette technique, des thèmes personnalisés incompatibles avec les nouvelles versions d'Angular, et l'équipe devait moderniser sans perturber le développement en cours.",
       "solution": "Direction d'une stratégie de migration par phases permettant à l'équipe de continuer le développement de fonctionnalités tout en effectuant la mise à niveau. Refactorisation des modules legacy pour utiliser les patterns Angular modernes, migration du système de thèmes personnalisés vers des variables CSS pour une meilleure maintenabilité, et mise à jour systématique de toutes les dépendances.",
-      "results": "Mise à niveau réussie vers Angular v16 avec zéro incident en production. Les temps de build ont été améliorés de 45%, et la base de code modernisée a permis à l'équipe d'implémenter de nouvelles fonctionnalités 30% plus rapidement. La migration a également résolu plus de 50 bugs de longue date liés au framework obsolète."
+      "results": "Mise à niveau réussie vers Angular v16 avec zéro incident en production. Les temps de build ont été améliorés de 45%, et la base de code modernisée a permis à l'équipe d'implémenter de nouvelles fonctionnalités 30% plus rapidement. La migration a également résolu plus de 50 bugs de longue date liés au framework obsolète.",
+      "highlights": [
+        "Direction de la migration complète du framework d'Angular v11 à v16",
+        "Refactorisation des modules legacy vers les patterns Angular modernes",
+        "Migration du système de thèmes personnalisés vers les variables CSS",
+        "Zéro incident en production pendant la migration",
+        "Amélioration des temps de build de 45%",
+        "Résolution de plus de 50 bugs de longue date liés au framework"
+      ]
     }
   }
 }

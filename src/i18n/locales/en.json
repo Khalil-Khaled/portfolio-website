@@ -18,8 +18,7 @@
     "titleSeparator": "|",
     "subtitle": "Angular Expert",
     "location": "Tunis, Tunisia · Open to relocation",
-    "description": "Building scalable, modern web applications with {years} of experience. Passionate about UI performance, developer experience, and clean architecture.",
-    "yearsExperience": "5+ years",
+    "description": "Building scalable, modern web applications with <years>5+ years</years> of experience. Passionate about UI performance, developer experience, and clean architecture.",
     "cta": {
       "contact": "Get in Touch",
       "projects": "View Projects"
@@ -29,9 +28,15 @@
   "about": {
     "sectionNumber": "01",
     "title": "About Me",
-    "paragraph1": "I'm a frontend engineer passionate about building <accent>scalable, modern web applications</accent> that deliver exceptional user experiences. With expertise in Angular and a strong foundation in React and TypeScript, I bring ideas to life with clean, maintainable code.",
-    "paragraph2": "Currently at <company>VERMEG</company>, I lead frontend development for a low-code platform, where I've designed a <accent>reusable component library of 75+ widgets</accent> and mentored junior developers. I'm always exploring new technologies and best practices to level up my craft.",
-    "paragraph3": "When I'm not coding, you'll find me contributing to open-source, exploring AI/ML certifications, or planning my next adventure. I'm open to international relocation and excited about new challenges in dynamic, product-driven teams.",
+    "intro": "I'm a frontend engineer passionate about building",
+    "highlight1": "scalable, modern web applications",
+    "intro2": "that deliver exceptional user experiences. With expertise in Angular and a strong foundation in React and TypeScript, I bring ideas to life with clean, maintainable code.",
+    "current1": "Currently at",
+    "company": "VERMEG",
+    "current2": ", I lead frontend development for a low-code platform, where I've designed a",
+    "highlight2": "reusable component library of 75+ widgets",
+    "current3": "and mentored junior developers. I'm always exploring new technologies and best practices to level up my craft.",
+    "personal": "When I'm not coding, you'll find me contributing to open-source, exploring AI/ML certifications, or planning my next adventure. I'm open to international relocation and excited about new challenges in dynamic, product-driven teams.",
     "techTitle": "Technologies I work with daily:",
     "stats": {
       "years": "Years Experience",
@@ -102,8 +107,8 @@
     "viewDetails": "View Details",
     "screenshotPlaceholder": "screenshot.png",
     "items": {
-      "veggo": {
-        "title": "VEGGO – Low-Code Platform",
+      "lowCode": {
+        "title": "Enterprise Low-Code Platform",
         "description": "Enterprise low-code platform for building financial applications. Led frontend development, designed 75+ reusable Angular widgets, and established component architecture patterns.",
         "period": "2024 - Present"
       },
@@ -229,20 +234,50 @@
     "techStack": "Tech Stack",
     "viewLive": "View Live Site",
     "viewCode": "View Source Code",
-    "veggo": {
-      "challenge": "VERMEG needed a modern low-code platform that would allow business users to build financial applications without deep technical knowledge. The existing tools were outdated, hard to maintain, and lacked the flexibility required for complex financial workflows.",
-      "solution": "I led the frontend development of VEGGO, designing and implementing a comprehensive component library from scratch. The architecture focused on reusability, accessibility, and performance, allowing users to drag-and-drop pre-built widgets to create sophisticated applications.",
-      "results": "The platform now powers multiple enterprise clients, reducing application development time by 60%. The component library has grown to 75+ widgets with 95% test coverage, and the team has expanded while maintaining code quality through the patterns and documentation I established."
+    "lowCode": {
+      "role": "Lead Frontend Developer",
+      "duration": "Jan 2024 - Present",
+      "challenge": "The company needed a modern low-code platform that would allow business users to build financial applications without deep technical knowledge. The existing tools were outdated, hard to maintain, and lacked the flexibility required for complex financial workflows.",
+      "solution": "I led the frontend development of the platform, designing and implementing a comprehensive component library from scratch. The architecture focused on reusability, accessibility, and performance, allowing users to drag-and-drop pre-built widgets to create sophisticated applications.",
+      "results": "The platform now powers multiple enterprise clients, reducing application development time by 60%. The component library has grown to 75+ widgets with 95% test coverage, and the team has expanded while maintaining code quality through the patterns and documentation I established.",
+      "highlights": [
+        "Designed and developed 75+ reusable Angular widgets from scratch",
+        "Established component architecture patterns adopted across the organization",
+        "Mentored 2 junior developers, improving team velocity by 25%",
+        "Achieved 95% test coverage with comprehensive unit and E2E tests",
+        "Migrated CI/CD pipelines to cloud, reducing build times by 65%",
+        "Created extensive documentation and Storybook stories for all components"
+      ]
     },
     "pijiz": {
+      "role": "Full Stack Developer",
+      "duration": "May 2024",
       "challenge": "The client needed a professional e-commerce store that could handle multiple languages, integrate various payment methods, and rank well on search engines. The store had to be easy to manage and reflect the brand's modern aesthetic.",
       "solution": "Built a custom Shopify store with a tailored theme that matched the brand identity. Implemented multi-language support for international customers, integrated local and international payment gateways, and optimized every page for SEO including meta tags, structured data, and page speed.",
-      "results": "The store launched successfully with a 40% improvement in page load times compared to the original template. The SEO optimizations led to first-page Google rankings for key product terms within 3 months of launch."
+      "results": "The store launched successfully with a 40% improvement in page load times compared to the original template. The SEO optimizations led to first-page Google rankings for key product terms within 3 months of launch.",
+      "highlights": [
+        "Built custom Shopify theme matching brand identity",
+        "Implemented multi-language support (Arabic, English, French)",
+        "Integrated multiple payment gateways including local options",
+        "Optimized page speed scoring 90+ on Google PageSpeed",
+        "Set up Google Analytics and conversion tracking",
+        "Configured custom domain and professional email"
+      ]
     },
     "banking": {
+      "role": "Lead Frontend Developer",
+      "duration": "Nov 2023 - Jan 2024",
       "challenge": "A major banking application was running on Angular v11, which was approaching end-of-life. The codebase had accumulated technical debt, custom themes that weren't compatible with newer Angular versions, and the team needed to modernize without disrupting ongoing development.",
       "solution": "Led a phased migration strategy that allowed the team to continue feature development while upgrading. Refactored legacy modules to use modern Angular patterns, migrated the custom theme system to CSS variables for better maintainability, and updated all dependencies systematically.",
-      "results": "Successfully upgraded to Angular v16 with zero production incidents. Build times improved by 45%, and the modernized codebase enabled the team to implement new features 30% faster. The migration also resolved 50+ long-standing bugs related to the outdated framework."
+      "results": "Successfully upgraded to Angular v16 with zero production incidents. Build times improved by 45%, and the modernized codebase enabled the team to implement new features 30% faster. The migration also resolved 50+ long-standing bugs related to the outdated framework.",
+      "highlights": [
+        "Led full framework migration from Angular v11 to v16",
+        "Refactored legacy modules to modern Angular patterns",
+        "Migrated custom theme system to CSS variables",
+        "Achieved zero production incidents during migration",
+        "Improved build times by 45%",
+        "Resolved 50+ long-standing framework-related bugs"
+      ]
     }
   }
 }

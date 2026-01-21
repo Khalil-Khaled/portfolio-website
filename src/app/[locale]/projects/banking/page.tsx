@@ -33,23 +33,11 @@ export default function BankingProjectPage() {
     'CSS Variables',
   ];
 
-  const highlights = [
-    'Led full framework migration from Angular v11 to v16',
-    'Refactored legacy modules to modern Angular patterns',
-    'Migrated custom theme system to CSS variables',
-    'Achieved zero production incidents during migration',
-    'Improved build times by 45%',
-    'Resolved 50+ long-standing framework-related bugs',
-  ];
-
   return (
     <ProjectDetail
       projectKey="banking"
       images={images}
       technologies={technologies}
-      role="Lead Frontend Developer"
-      duration="Nov 2023 - Jan 2024"
-      highlights={highlights}
     />
   );
 }

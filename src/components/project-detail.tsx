@@ -12,9 +12,6 @@ export interface ProjectDetailProps {
   technologies: string[];
   liveUrl?: string;
   githubUrl?: string;
-  role: string;
-  duration: string;
-  highlights: string[];
 }
 
 export function ProjectDetail({
@@ -23,12 +20,27 @@ export function ProjectDetail({
   technologies,
   liveUrl,
   githubUrl,
-  role,
-  duration,
-  highlights,
 }: ProjectDetailProps) {
   const t = useTranslations('projectDetails');
   const tProjects = useTranslations('projects.items');
+  
+  // Get translated role, duration, and highlights
+  const role = t(`${projectKey}.role`);
+  const duration = t(`${projectKey}.duration`);
+  
+  // Get highlights as array from translations
+  const highlightsCount = 6; // Maximum number of highlights
+  const highlights: string[] = [];
+  for (let i = 0; i < highlightsCount; i++) {
+    try {
+      const highlight = t(`${projectKey}.highlights.${i}`);
+      if (highlight && !highlight.includes('MISSING_MESSAGE')) {
+        highlights.push(highlight);
+      }
+    } catch {
+      break;
+    }
+  }
 
   return (
     <article className="min-h-screen pt-24 pb-16">
@@ -126,7 +138,7 @@ export function ProjectDetail({
                     transition={{ delay: 0.5 + index * 0.1 }}
                     className="flex items-start gap-3 text-day-text/80 dark:text-night-text/80"
                   >
-                    <span className="text-day-accent dark:text-night-cyan mt-1.5">▹</span>
+                    <span className="text-day-accent dark:text-night-cyan">▹</span>
                     {highlight}
                   </motion.li>
                 ))}

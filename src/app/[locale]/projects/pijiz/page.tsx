@@ -31,24 +31,12 @@ export default function PijizProjectPage() {
     'Google Analytics',
   ];
 
-  const highlights = [
-    'Built custom Shopify theme matching brand identity',
-    'Implemented multi-language support (Arabic, English, French)',
-    'Integrated multiple payment gateways including local options',
-    'Optimized page speed scoring 90+ on Google PageSpeed',
-    'Set up Google Analytics and conversion tracking',
-    'Configured custom domain and professional email',
-  ];
-
   return (
     <ProjectDetail
       projectKey="pijiz"
       images={images}
       technologies={technologies}
       liveUrl="https://pijiz.com"
-      role="Full Stack Developer"
-      duration="May 2024"
-      highlights={highlights}
     />
   );
 }
