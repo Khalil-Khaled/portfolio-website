@@ -39,22 +39,18 @@ export function ProjectGallery({ images }: ProjectGalleryProps) {
           onClick={() => openLightbox(currentIndex)}
           whileHover={{ scale: 1.01 }}
         >
-          {/* Placeholder for main image */}
-          <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-day-accent/5 to-day-accent-alt/5 dark:from-night-cyan/5 dark:to-night-accent/5">
-            <div className="text-center">
-              <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-day-bg-highlight dark:bg-night-bg-highlight flex items-center justify-center">
-                <ZoomIn className="w-8 h-8 text-day-accent/50 dark:text-night-cyan/50" />
-              </div>
-              <p className="text-sm text-day-comment dark:text-night-comment font-mono">
-                {images[currentIndex]?.src || 'screenshot-1.png'}
-              </p>
-              {images[currentIndex]?.caption && (
-                <p className="text-xs text-day-text/60 dark:text-night-text/60 mt-2">
-                  {images[currentIndex].caption}
-                </p>
-              )}
+          <img
+            src={images[currentIndex]?.src}
+            alt={images[currentIndex]?.alt}
+            className="w-full h-full object-cover"
+          />
+
+          {/* Caption overlay */}
+          {images[currentIndex]?.caption && (
+            <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/60 to-transparent">
+              <p className="text-white text-sm">{images[currentIndex].caption}</p>
             </div>
-          </div>
+          )}
 
           {/* Zoom indicator */}
           <div className="absolute top-4 right-4 p-2 rounded-lg bg-day-bg/80 dark:bg-night-bg/80 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity">
@@ -103,12 +99,11 @@ export function ProjectGallery({ images }: ProjectGalleryProps) {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                {/* Thumbnail placeholder */}
-                <div className="absolute inset-0 bg-day-bg-alt dark:bg-night-bg-alt flex items-center justify-center">
-                  <span className="text-xs font-mono text-day-comment dark:text-night-comment">
-                    {index + 1}
-                  </span>
-                </div>
+                <img
+                  src={image.src}
+                  alt={image.alt}
+                  className="w-full h-full object-cover"
+                />
               </motion.button>
             ))}
           </div>
@@ -147,19 +142,16 @@ export function ProjectGallery({ images }: ProjectGalleryProps) {
               className="relative max-w-5xl max-h-[80vh] w-full"
               onClick={(e) => e.stopPropagation()}
             >
-              {/* Lightbox image placeholder */}
-              <div className="aspect-video rounded-xl bg-day-bg-alt dark:bg-night-bg-alt flex items-center justify-center">
-                <div className="text-center">
-                  <p className="text-lg font-mono text-day-comment dark:text-night-comment">
-                    {images[currentIndex]?.src || `screenshot-${currentIndex + 1}.png`}
-                  </p>
-                  {images[currentIndex]?.caption && (
-                    <p className="text-sm text-day-text/60 dark:text-night-text/60 mt-2">
-                      {images[currentIndex].caption}
-                    </p>
-                  )}
-                </div>
-              </div>
+              <img
+                src={images[currentIndex]?.src}
+                alt={images[currentIndex]?.alt}
+                className="w-full h-auto max-h-[80vh] object-contain rounded-xl"
+              />
+              {images[currentIndex]?.caption && (
+                <p className="text-center text-white/80 mt-4 text-sm">
+                  {images[currentIndex].caption}
+                </p>
+              )}
             </motion.div>
 
             {/* Navigation arrows */}

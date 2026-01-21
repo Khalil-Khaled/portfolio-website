@@ -9,6 +9,7 @@ import { ExternalLink, Github, Star, Folder, ArrowRight } from 'lucide-react';
 interface ProjectData {
   key: string;
   technologies: string[];
+  image?: string;
   liveUrl?: string;
   githubUrl?: string;
   featured?: boolean;
@@ -19,6 +20,7 @@ const projectsData: ProjectData[] = [
   {
     key: 'lowCode',
     technologies: ['Angular', 'TypeScript', 'RxJS', 'NgRx', 'SASS', 'Storybook'],
+    image: '/images/projects/low-code/site_mockup.png',
     featured: true,
     detailPage: '/projects/low-code',
   },
@@ -83,16 +85,24 @@ function ProjectCard({ project, index }: { project: ProjectData; index: number }
           </div>
         )}
 
-        {/* Image Placeholder */}
+        {/* Project Image */}
         <div className="relative mb-4 rounded-lg overflow-hidden bg-day-bg-highlight dark:bg-night-bg-highlight aspect-video">
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="text-center">
-              <Folder className="w-12 h-12 mx-auto mb-2 text-day-accent/40 dark:text-night-cyan/40" />
-              <p className="text-xs text-day-comment dark:text-night-comment font-mono">
-                {t('screenshotPlaceholder')}
-              </p>
+          {project.image ? (
+            <img
+              src={project.image}
+              alt={t(`items.${project.key}.title`)}
+              className="w-full h-full object-cover"
+            />
+          ) : (
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="text-center">
+                <Folder className="w-12 h-12 mx-auto mb-2 text-day-accent/40 dark:text-night-cyan/40" />
+                <p className="text-xs text-day-comment dark:text-night-comment font-mono">
+                  {t('screenshotPlaceholder')}
+                </p>
+              </div>
             </div>
-          </div>
+          )}
           
           {/* Hover Overlay */}
           <motion.div
