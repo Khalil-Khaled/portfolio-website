@@ -33,3 +33,4 @@ yarn-error.log*
 next-env.d.ts
 .prompts/.git-setup-done
 .prompts/.migration-log.json
+.prompts

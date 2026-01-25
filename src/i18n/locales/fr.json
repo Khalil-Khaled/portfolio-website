@@ -109,8 +109,8 @@
     "items": {
       "lowCode": {
         "title": "Plateforme Low-Code Entreprise",
-        "description": "Plateforme low-code d'entreprise pour créer des applications financières. Direction du développement frontend, conception de 75+ widgets Angular réutilisables et établissement de patterns d'architecture de composants.",
-        "period": "2024 - Présent"
+        "description": "Plateforme low-code pour créer des applications financières, réduisant le temps de développement et accélérant la mise sur le marché. Direction du développement frontend pendant 5 ans, architecture d'une bibliothèque de 75+ widgets réutilisables, et pilotage des migrations Angular jusqu'à la v20.",
+        "period": "2021 - Présent"
       },
       "pijiz": {
         "title": "Boutique E-commerce – Pijiz",
@@ -235,18 +235,24 @@
     "viewLive": "Voir le Site",
     "viewCode": "Voir le Code",
     "lowCode": {
-      "role": "Lead Développeur Frontend",
-      "duration": "Jan 2024 - Présent",
-      "challenge": "L'entreprise avait besoin d'une plateforme low-code moderne permettant aux utilisateurs métier de créer des applications financières sans connaissances techniques approfondies. Les outils existants étaient obsolètes, difficiles à maintenir et manquaient de flexibilité pour les workflows financiers complexes.",
-      "solution": "J'ai dirigé le développement frontend de la plateforme, concevant et implémentant une bibliothèque de composants complète. L'architecture s'est concentrée sur la réutilisabilité, l'accessibilité et la performance, permettant aux utilisateurs de glisser-déposer des widgets pré-construits pour créer des applications sophistiquées.",
-      "results": "La plateforme alimente maintenant plusieurs clients entreprise, réduisant le temps de développement d'applications de 60%. La bibliothèque de composants compte plus de 75 widgets avec 95% de couverture de tests, et l'équipe s'est agrandie tout en maintenant la qualité du code grâce aux patterns et à la documentation que j'ai établis.",
+      "role": "Développeur Frontend Senior / Tech Lead",
+      "duration": "2021 - Présent (5 ans)",
+      "challenge": "Les institutions financières avaient besoin d'un moyen de créer et déployer rapidement des applications personnalisées sans ressources de développement importantes. Les cycles de développement traditionnels étaient trop lents et coûteux, avec du code dupliqué entre les projets et aucune gestion centralisée des composants. L'entreprise avait besoin d'une plateforme qui réduirait drastiquement le time-to-market tout en maintenant qualité et cohérence.",
+      "solution": "J'ai contribué puis progressivement pris en charge le développement frontend d'une plateforme low-code complète construite sur une architecture monorepo NX avec Angular 20, RxJS, NgRx et Signals. Au cours des 3 dernières années, j'ai co-dirigé le développement avec un collègue, pilotant les décisions techniques majeures. La plateforme permet aux utilisateurs de concevoir des diagrammes UML générant du code backend, créer des frontends Angular par glisser-déposer dans le designer visuel, écrire des implémentations personnalisées dans un éditeur VS Code intégré, et builder/exécuter des applications avec monitoring des logs en temps réel. J'ai architecturé et implémenté une bibliothèque de composants réutilisables de 75+ widgets exposée via Storybook, intégré des bibliothèques complexes (bpmn.js pour la modélisation des processus métier, CodeMirror, JointJS, GridStack), et construit des fonctionnalités temps réel incluant un centre de notifications avec intégration WebSocket et streaming de logs depuis Grafana. J'ai également créé le système de thèmes SASS/CSS pour le rebranding de la plateforme et développé le thème design system pour toutes les applications générées.",
+      "results": "La plateforme sert maintenant plus de 150 clients entreprise, réduisant le temps de développement de 40%. Sur 5 ans, j'ai résolu 520+ bugs et livré 110+ fonctionnalités. La bibliothèque de composants a atteint 93%+ de couverture de tests. Les optimisations CI/CD ont résulté en 65% de builds plus rapides, 30% moins d'échecs de pipeline, et 30% de réduction de la taille des artifacts. J'ai contribué avec succès à plusieurs migrations Angular, dont la dernière vers Angular v20 affectant la plateforme et toutes les applications générées.",
       "highlights": [
-        "Conception et développement de 75+ widgets Angular réutilisables",
-        "Établissement de patterns d'architecture de composants adoptés dans toute l'organisation",
-        "Mentorat de 2 développeurs juniors, améliorant la vélocité de l'équipe de 25%",
-        "Atteinte de 95% de couverture de tests avec tests unitaires et E2E",
-        "Migration des pipelines CI/CD vers le cloud, réduisant les temps de build de 65%",
-        "Création de documentation complète et stories Storybook pour tous les composants"
+        "Contribution au développement frontend pendant 5 ans ; co-direction du développement les 3 dernières années avec un collègue",
+        "Résolution de 520+ bugs et livraison de 110+ fonctionnalités sur tout le cycle de vie de la plateforme",
+        "Architecture et implémentation d'une bibliothèque de 75+ widgets réutilisables avec 93%+ de couverture de tests",
+        "Création du système de thèmes SASS/CSS pour le rebranding de la plateforme et du thème design system pour les applications générées",
+        "Construction d'un centre de notifications temps réel avec intégration API REST et WebSocket",
+        "Implémentation du streaming et gestion des logs depuis les connexions WebSocket Grafana",
+        "Intégration et personnalisation de bpmn.js pour la modélisation des processus métier",
+        "Pilotage de plusieurs migrations Angular incluant la dernière vers Angular v20",
+        "Intégration de bibliothèques complexes : CodeMirror (édition de code), JointJS (diagrammes), GridStack (layouts)",
+        "Gestion des pipelines CI/CD frontend atteignant 65% de builds plus rapides et 30% d'artifacts plus légers",
+        "Exposition de la bibliothèque de composants via Storybook avec documentation complète et tests visuels",
+        "Mentorat de développeurs juniors et établissement de patterns de code adoptés dans l'organisation"
       ]
     },
     "pijiz": {

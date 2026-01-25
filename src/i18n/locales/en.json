@@ -109,8 +109,8 @@
     "items": {
       "lowCode": {
         "title": "Enterprise Low-Code Platform",
-        "description": "Enterprise low-code platform for building financial applications. Led frontend development, designed 75+ reusable Angular widgets, and established component architecture patterns.",
-        "period": "2024 - Present"
+        "description": "Low-code platform for building financial applications, reducing development time and accelerating time-to-market. Led frontend development for 5 years, architected a reusable component library of 75+ widgets, and drove major Angular upgrades to v20.",
+        "period": "2021 - Present"
       },
       "pijiz": {
         "title": "E-commerce Store – Pijiz",
@@ -235,18 +235,24 @@
     "viewLive": "View Live Site",
     "viewCode": "View Source Code",
     "lowCode": {
-      "role": "Lead Frontend Developer",
-      "duration": "Jan 2024 - Present",
-      "challenge": "The company needed a modern low-code platform that would allow business users to build financial applications without deep technical knowledge. The existing tools were outdated, hard to maintain, and lacked the flexibility required for complex financial workflows.",
-      "solution": "I led the frontend development of the platform, designing and implementing a comprehensive component library from scratch. The architecture focused on reusability, accessibility, and performance, allowing users to drag-and-drop pre-built widgets to create sophisticated applications.",
-      "results": "The platform now powers multiple enterprise clients, reducing application development time by 60%. The component library has grown to 75+ widgets with 95% test coverage, and the team has expanded while maintaining code quality through the patterns and documentation I established.",
+      "role": "Senior Frontend Developer / Tech Lead",
+      "duration": "2021 - Present (5 years)",
+      "challenge": "Financial institutions needed a way to rapidly build and deploy custom applications without extensive development resources. Traditional development cycles were too slow and expensive, with duplicated code across projects and no centralized component management. The company needed a platform that would dramatically reduce time-to-market while maintaining quality and consistency.",
+      "solution": "I contributed to and progressively took ownership of the frontend development of a comprehensive low-code platform built on an NX monorepo architecture with Angular 20, RxJS, NgRx, and Signals. Over the last 3 years, I co-led development alongside a colleague, driving major technical decisions. The platform enables users to design UML diagrams that generate backend code, create Angular frontends through drag-and-drop in the visual designer, write custom implementations in an embedded VS Code editor, and build/run applications with real-time log monitoring. I architected and implemented a reusable component library of 75+ widgets exposed via Storybook, integrated complex libraries (bpmn.js for business process modeling, CodeMirror, JointJS, GridStack), and built real-time features including a notifications center with WebSocket integration and log streaming from Grafana. I also created the SASS/CSS theming system for the platform's rebranding and developed the design system theme for all generated applications.",
+      "results": "The platform now serves over 150 enterprise clients, reducing application development time by 40%. Over 5 years, I resolved 520+ bugs and delivered 110+ features. The component library achieved 93%+ test coverage. CI/CD optimizations resulted in 65% faster build times, 30% fewer pipeline failures, and 30% reduction in build artifact size. Successfully contributed to multiple Angular upgrades, with the latest migration to Angular v20 affecting both the platform and all generated applications.",
       "highlights": [
-        "Designed and developed 75+ reusable Angular widgets from scratch",
-        "Established component architecture patterns adopted across the organization",
-        "Mentored 2 junior developers, improving team velocity by 25%",
-        "Achieved 95% test coverage with comprehensive unit and E2E tests",
-        "Migrated CI/CD pipelines to cloud, reducing build times by 65%",
-        "Created extensive documentation and Storybook stories for all components"
+        "Contributed to frontend development for 5 years; co-led development in the last 3 years alongside a colleague",
+        "Resolved 520+ bugs and delivered 110+ features across the platform lifecycle",
+        "Architected and implemented a reusable component library of 75+ widgets with 93%+ test coverage",
+        "Created SASS/CSS theming system for platform rebranding and design system theme for generated applications",
+        "Built real-time notifications center with REST API and WebSocket integration",
+        "Implemented log streaming and management from Grafana WebSocket connections",
+        "Integrated and customized bpmn.js for business process modeling within the platform",
+        "Drove multiple Angular version upgrades including the latest migration to Angular v20",
+        "Integrated complex libraries: CodeMirror (code editing), JointJS (diagrams), GridStack (layouts)",
+        "Managed frontend CI/CD pipelines achieving 65% faster builds and 30% smaller artifacts",
+        "Exposed component library via Storybook with comprehensive documentation and visual testing",
+        "Mentored junior developers and established coding patterns adopted across the organization"
       ]
     },
     "pijiz": {
