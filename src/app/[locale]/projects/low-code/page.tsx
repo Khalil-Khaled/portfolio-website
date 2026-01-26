@@ -27,10 +27,6 @@ export default function LowCodeProjectPage() {
     { src: '/images/projects/low-code/generated-app-dashboard.png', alt: 'Generated App Dashboard', caption: 'Example generated application - Dashboard' },
     { src: '/images/projects/low-code/generated-app-details.png', alt: 'Generated App Details', caption: 'Example generated application - Details view' },
     { src: '/images/projects/low-code/component-library-storybook.png', alt: 'Component Library Storybook', caption: 'Storybook documentation for 75+ widgets' },
-    { src: '/images/projects/low-code/project-architecture-nx.png', alt: 'Project Architecture', caption: 'NX monorepo architecture' },
-    { src: '/images/projects/low-code/project-settings.png', alt: 'Project Settings', caption: 'Project configuration' },
-    { src: '/images/projects/low-code/account-settings-.png', alt: 'Account Settings', caption: 'User account settings' },
-    { src: '/images/projects/low-code/notifications-center.png', alt: 'Notifications', caption: 'Notification center' },
   ];
 
   const technologies = [
