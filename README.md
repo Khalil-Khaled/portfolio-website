@@ -68,8 +68,10 @@ Replace the placeholder in `src/components/about.tsx` with your image:
 
 ### Adding Your CV
 
-1. Add your CV PDF to the `public/` folder as `cv.pdf`
-2. The download button will automatically work
+1. Add your CV PDFs to the `public/` folder:
+   - `cv-en.pdf` for English version
+   - `cv-fr.pdf` for French version
+2. The download button will automatically serve the correct CV based on the selected language
 
 ## Deployment
 
@@ -103,8 +105,9 @@ src/
 │   ├── theme-provider.tsx
 │   └── theme-toggle.tsx
 public/
-├── cv.pdf              # Your CV (add this)
-└── projects/           # Project screenshots (create this)
+├── CV-Khalil-Khaled-EN.pdf           # Your CV - English version (add this)
+├── CV-Khalil-Khaled-FR.pdf           # Your CV - French version (add this)
+└── images/projects/         # Project screenshots (create this)
 ```
 
 ## License

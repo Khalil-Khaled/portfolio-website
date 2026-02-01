@@ -31,6 +31,9 @@ export function Navigation() {
     { name: t('contact'), href: getHref('contact') },
   ];
 
+  // Get CV filename based on locale
+  const cvFilename = locale === 'fr' ? '/CV-Khalil-Khaled-FR.pdf' : '/CV-Khalil-Khaled-EN.pdf';
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
@@ -85,7 +88,7 @@ export function Navigation() {
             {/* Actions */}
             <div className="flex items-center gap-3">
               <motion.a
-                href="/cv.pdf"
+                href={cvFilename}
                 download
                 className="hidden sm:flex items-center gap-2 px-4 py-2 rounded-full bg-day-accent dark:bg-night-cyan text-white dark:text-night-bg font-medium text-sm transition-all hover:shadow-lg hover:shadow-day-accent/25 dark:hover:shadow-night-cyan/25"
                 whileHover={{ scale: 1.05 }}
@@ -144,7 +147,7 @@ export function Navigation() {
                   </motion.a>
                 ))}
                 <motion.a
-                  href="/cv.pdf"
+                  href={cvFilename}
                   download
                   className="flex items-center gap-2 mt-4 px-6 py-3 rounded-full bg-day-accent dark:bg-night-cyan text-white dark:text-night-bg font-medium w-fit"
                   initial={{ opacity: 0, x: -20 }}

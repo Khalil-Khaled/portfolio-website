@@ -1,5 +1,6 @@
 # This file ensures the public folder is tracked by git
 # Add your assets here:
-# - cv.pdf (your resume)
+# - cv-en.pdf (your resume - English)
+# - cv-fr.pdf (your resume - French)
 # - projects/ folder with screenshots
 # - your profile photo
