@@ -1,21 +1,21 @@
-'use client';
+"use client";
 
-import { useTranslations } from 'next-intl';
-import { motion } from 'framer-motion';
-import { useInView } from 'framer-motion';
-import { useRef } from 'react';
-import { Code2, Users, Zap, Globe } from 'lucide-react';
+import { useTranslations } from "next-intl";
+import { motion } from "framer-motion";
+import { useInView } from "framer-motion";
+import { useRef } from "react";
+import { Code2, Users, Zap, Globe } from "lucide-react";
 
 export function About() {
-  const t = useTranslations('about');
+  const t = useTranslations("about");
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '-100px' });
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const stats = [
-    { icon: Code2, value: '5+', label: t('stats.years') },
-    { icon: Users, value: '75+', label: t('stats.components') },
-    { icon: Zap, value: '160+', label: t('stats.bugs') },
-    { icon: Globe, value: '3', label: t('stats.languages') },
+    { icon: Code2, value: "5+", label: t("stats.years") },
+    { icon: Users, value: "75+", label: t("stats.components") },
+    { icon: Zap, value: "160+", label: t("stats.bugs") },
+    { icon: Globe, value: "3", label: t("stats.languages") },
   ];
 
   return (
@@ -29,8 +29,10 @@ export function About() {
         >
           {/* Section Header */}
           <div className="flex items-center gap-4 mb-12">
-            <span className="text-day-accent dark:text-night-cyan font-mono">{t('sectionNumber')}.</span>
-            <h2 className="text-3xl sm:text-4xl font-bold">{t('title')}</h2>
+            <span className="text-day-accent dark:text-night-cyan font-mono">
+              {t("sectionNumber")}.
+            </span>
+            <h2 className="text-3xl sm:text-4xl font-bold">{t("title")}</h2>
             <div className="flex-1 h-px bg-day-bg-highlight dark:bg-night-bg-highlight" />
           </div>
 
@@ -38,40 +40,47 @@ export function About() {
             {/* Text Content */}
             <div className="space-y-6">
               <p className="text-day-text/80 dark:text-night-text/80 leading-relaxed">
-                {t('intro')}{' '}
+                {t("intro")}{" "}
                 <span className="text-day-accent dark:text-night-cyan font-medium">
-                  {t('highlight1')}
-                </span>{' '}
-                {t('intro2')}
+                  {t("highlight1")}
+                </span>{" "}
+                {t("intro2")}
               </p>
               <p className="text-day-text/80 dark:text-night-text/80 leading-relaxed">
-                {t('current1')} <span className="font-medium">{t('company')}</span>
-                {t('current2')}{' '}
+                {t("current1")}{" "}
+                <span className="font-medium">{t("company")}</span>
+                {t("current2")}{" "}
                 <span className="text-day-accent dark:text-night-cyan font-medium">
-                  {t('highlight2')}
-                </span>{' '}
-                {t('current3')}
+                  {t("highlight2")}
+                </span>{" "}
+                {t("current3")}
               </p>
               <p className="text-day-text/80 dark:text-night-text/80 leading-relaxed">
-                {t('personal')}
+                {t("personal")}
               </p>
 
               {/* Tech Stack Highlight */}
               <div className="pt-4">
                 <p className="text-sm font-mono text-day-comment dark:text-night-comment mb-3">
-                  {t('techTitle')}
+                  {t("techTitle")}
                 </p>
                 <div className="flex flex-wrap gap-2">
-                  {['Angular', 'TypeScript', 'RxJS', 'NgRx', 'Tailwind', 'Jest', 'Cypress'].map(
-                    (tech) => (
-                      <span
-                        key={tech}
-                        className="px-3 py-1 text-sm font-mono bg-day-bg-alt dark:bg-night-bg-alt border border-day-bg-highlight dark:border-night-bg-highlight rounded-full text-day-accent dark:text-night-cyan"
-                      >
-                        {tech}
-                      </span>
-                    )
-                  )}
+                  {[
+                    "Angular",
+                    "TypeScript",
+                    "RxJS",
+                    "NgRx",
+                    "Tailwind",
+                    "Jest",
+                    "Cypress",
+                  ].map((tech) => (
+                    <span
+                      key={tech}
+                      className="px-3 py-1 text-sm font-mono bg-day-bg-alt dark:bg-night-bg-alt border border-day-bg-highlight dark:border-night-bg-highlight rounded-full text-day-accent dark:text-night-cyan"
+                    >
+                      {tech}
+                    </span>
+                  ))}
                 </div>
               </div>
             </div>
@@ -86,18 +95,11 @@ export function About() {
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-day-accent/20 to-day-accent-alt/20 dark:from-night-cyan/20 dark:to-night-accent/20 rounded-2xl transform rotate-3" />
                 <div className="relative bg-day-bg-alt dark:bg-night-bg-alt rounded-2xl overflow-hidden border border-day-bg-highlight dark:border-night-bg-highlight">
-                  {/* Replace this div with your actual image */}
-                  <div className="aspect-square flex items-center justify-center bg-gradient-to-br from-day-accent/10 to-day-accent-alt/10 dark:from-night-cyan/10 dark:to-night-accent/10">
-                    <div className="text-center">
-                      <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-day-bg-highlight dark:bg-night-bg-highlight flex items-center justify-center">
-                        <span className="text-4xl font-bold text-gradient">KK</span>
-                      </div>
-                      <p className="text-sm text-day-comment dark:text-night-comment font-mono">
-                        {/* Your photo here */}
-                        {t('imagePlaceholder')}
-                      </p>
-                    </div>
-                  </div>
+                  <img
+                    src="/images/profile_image.jpg"
+                    alt={t("imagePlaceholder")}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               </motion.div>
 
