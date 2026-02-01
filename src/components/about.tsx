@@ -4,7 +4,7 @@ import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { Code2, Users, Zap, Globe } from "lucide-react";
+import { Code2, Users, Award, Globe } from "lucide-react";
 
 export function About() {
   const t = useTranslations("about");
@@ -13,8 +13,8 @@ export function About() {
 
   const stats = [
     { icon: Code2, value: "5+", label: t("stats.years") },
-    { icon: Users, value: "75+", label: t("stats.components") },
-    { icon: Zap, value: "160+", label: t("stats.bugs") },
+    { icon: Users, value: "150+", label: t("stats.users") },
+    { icon: Award, value: "3", label: t("stats.certifications") },
     { icon: Globe, value: "3", label: t("stats.languages") },
   ];
 
