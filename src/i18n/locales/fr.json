@@ -114,8 +114,8 @@
       },
       "pijiz": {
         "title": "Boutique E-commerce – Pijiz",
-        "description": "Plateforme e-commerce basée sur Shopify avec développement de thème personnalisé, support multilingue, intégration de paiement et optimisation SEO.",
-        "period": "Mai 2024"
+        "description": "Boutique Shopify construite à partir d'un template, personnalisée selon l'identité de la marque avec système de paiement à la livraison, intégration webhook et support multilingue.",
+        "period": "Avr 2024 - Mai 2024"
       },
       "dubai": {
         "title": "Refonte UI Visit Dubai",
@@ -256,18 +256,21 @@
       ]
     },
     "pijiz": {
-      "role": "Développeur Full Stack",
-      "duration": "Mai 2024",
-      "challenge": "Le client avait besoin d'une boutique e-commerce professionnelle capable de gérer plusieurs langues, d'intégrer différents modes de paiement et de bien se positionner sur les moteurs de recherche. La boutique devait être facile à gérer et refléter l'esthétique moderne de la marque.",
-      "solution": "Construction d'une boutique Shopify personnalisée avec un thème adapté à l'identité de la marque. Implémentation du support multilingue pour les clients internationaux, intégration de passerelles de paiement locales et internationales, et optimisation de chaque page pour le SEO incluant les balises meta, les données structurées et la vitesse de chargement.",
-      "results": "La boutique a été lancée avec succès avec une amélioration de 40% des temps de chargement par rapport au template original. Les optimisations SEO ont conduit à des classements en première page Google pour les termes produits clés dans les 3 mois suivant le lancement.",
+      "role": "Développeur Frontend / Développeur Shopify",
+      "duration": "Avr 2024 - Mai 2024",
+      "challenge": "Le client avait besoin d'une boutique e-commerce professionnelle reflétant l'identité de sa marque, supportant plusieurs langues et s'intégrant avec son système de gestion de livraison. La boutique devait être mise en place rapidement tout en conservant une apparence soignée et professionnelle.",
+      "solution": "Achat d'un template Shopify et personnalisation pour correspondre à l'identité visuelle de la marque. Configuration des pages, collections et structure du catalogue produits. Implémentation d'un système de paiement à la livraison avec intégration webhook créant automatiquement des livraisons dans une plateforme tierce de gestion de livraison lorsque les commandes sont confirmées par le marchand. Configuration de l'internationalisation pour l'anglais et le français, intégration d'un widget de flux Instagram via une application Shopify, et création d'une page \"bientôt disponible\" personnalisée avant le lancement public. Achat et configuration du domaine personnalisé avec configuration DNS, et création de comptes email professionnels utilisant le domaine.",
+      "results": "La boutique a été lancée avec succès avec une expérience de marque entièrement personnalisée. Le système de paiement à la livraison avec intégration webhook a rationalisé le workflow de commande à livraison. La page \"bientôt disponible\" a généré de l'anticipation avant le lancement, et le support multilingue a élargi la portée de la boutique aux clients internationaux.",
       "highlights": [
-        "Création d'un thème Shopify personnalisé correspondant à l'identité de la marque",
-        "Implémentation du support multilingue (Arabe, Anglais, Français)",
-        "Intégration de plusieurs passerelles de paiement incluant des options locales",
-        "Optimisation de la vitesse de page avec un score de 90+ sur Google PageSpeed",
-        "Configuration de Google Analytics et du suivi des conversions",
-        "Configuration du domaine personnalisé et de l'email professionnel"
+        "Personnalisation du template Shopify pour correspondre à l'identité visuelle de la marque",
+        "Configuration des pages, collections et structure du catalogue produits",
+        "Implémentation du système de paiement à la livraison avec intégration webhook vers une plateforme tierce de gestion de livraison",
+        "Configuration de l'internationalisation pour le support anglais et français",
+        "Intégration d'un widget de flux Instagram via une application Shopify pour la présence sur les réseaux sociaux",
+        "Création d'une page \"bientôt disponible\" personnalisée avant le lancement public",
+        "Achat et configuration du domaine personnalisé avec configuration DNS",
+        "Configuration de comptes email professionnels utilisant le domaine personnalisé",
+        "Ajout du site web à Google Search Console pour l'indexation"
       ]
     },
     "banking": {

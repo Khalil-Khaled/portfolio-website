@@ -16,7 +16,7 @@ export async function generateMetadata({
 
 export default function PijizProjectPage() {
   const images = [
-    { src: 'pijiz-home.png', alt: 'Pijiz Homepage', caption: 'Homepage with featured products' },
+    { src: '/images/projects/pijiz/mock_website.png', alt: 'Pijiz Homepage', caption: 'Homepage with featured products' },
     { src: 'pijiz-product.png', alt: 'Pijiz Product Page', caption: 'Product detail page' },
     { src: 'pijiz-cart.png', alt: 'Pijiz Cart', caption: 'Shopping cart experience' },
     { src: 'pijiz-checkout.png', alt: 'Pijiz Checkout', caption: 'Streamlined checkout flow' },
@@ -27,8 +27,8 @@ export default function PijizProjectPage() {
     'Liquid',
     'JavaScript',
     'CSS3',
-    'SEO',
-    'Google Analytics',
+    'Webhooks',
+    'Google Search Console',
   ];
 
   return (

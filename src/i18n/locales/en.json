@@ -114,8 +114,8 @@
       },
       "pijiz": {
         "title": "E-commerce Store – Pijiz",
-        "description": "Shopify-based e-commerce platform with custom theme development, multi-language support, payment integration, and SEO optimization.",
-        "period": "May 2024"
+        "description": "Shopify e-commerce store built from a template, customized to match brand identity with cash-on-delivery payment system, webhook integration, and multi-language support.",
+        "period": "Apr 2024 - May 2024"
       },
       "dubai": {
         "title": "Visit Dubai UI Redesign",
@@ -256,18 +256,21 @@
       ]
     },
     "pijiz": {
-      "role": "Full Stack Developer",
-      "duration": "May 2024",
-      "challenge": "The client needed a professional e-commerce store that could handle multiple languages, integrate various payment methods, and rank well on search engines. The store had to be easy to manage and reflect the brand's modern aesthetic.",
-      "solution": "Built a custom Shopify store with a tailored theme that matched the brand identity. Implemented multi-language support for international customers, integrated local and international payment gateways, and optimized every page for SEO including meta tags, structured data, and page speed.",
-      "results": "The store launched successfully with a 40% improvement in page load times compared to the original template. The SEO optimizations led to first-page Google rankings for key product terms within 3 months of launch.",
+      "role": "Frontend Developer / Shopify Developer",
+      "duration": "Apr 2024 - May 2024",
+      "challenge": "The client needed a professional e-commerce store that reflected their brand identity, supported multiple languages, and integrated with their delivery management system. The store needed to be set up quickly while maintaining a polished, professional appearance.",
+      "solution": "Purchased a Shopify template and customized it to match the brand's visual identity. Set up pages, collections, and product catalog structure. Implemented a cash-on-delivery payment system with webhook integration that automatically creates deliveries in a third-party delivery management platform when orders are confirmed by the merchant. Configured internationalization for English and French, integrated an Instagram feed widget via a Shopify app, and built a custom coming soon page before public launch. Purchased and configured the custom domain with DNS setup, and created professional email accounts using the domain.",
+      "results": "The store launched successfully with a fully customized brand experience. The cash-on-delivery system with webhook integration streamlined the order-to-delivery workflow. The coming soon page generated anticipation before launch, and the multi-language support expanded the store's reach to international customers.",
       "highlights": [
-        "Built custom Shopify theme matching brand identity",
-        "Implemented multi-language support (Arabic, English, French)",
-        "Integrated multiple payment gateways including local options",
-        "Optimized page speed scoring 90+ on Google PageSpeed",
-        "Set up Google Analytics and conversion tracking",
-        "Configured custom domain and professional email"
+        "Customized Shopify template to match brand visual identity",
+        "Set up pages, collections, and product catalog structure",
+        "Implemented cash-on-delivery payment system with webhook integration to third-party delivery management platform",
+        "Configured internationalization for English and French language support",
+        "Integrated Instagram feed widget via Shopify app for social media presence",
+        "Built custom coming soon page before public launch",
+        "Purchased and configured custom domain with DNS setup",
+        "Set up professional email accounts using the custom domain",
+        "Added website to Google Search Console for indexing"
       ]
     },
     "banking": {

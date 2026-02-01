@@ -27,6 +27,7 @@ const projectsData: ProjectData[] = [
   {
     key: 'pijiz',
     technologies: ['Shopify', 'Liquid', 'JavaScript', 'CSS'],
+    image: '/images/projects/pijiz/mock_website.png',
     liveUrl: 'https://pijiz.com',
     detailPage: '/projects/pijiz',
   },
